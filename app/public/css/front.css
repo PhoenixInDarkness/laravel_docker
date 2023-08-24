@@ -1,0 +1,300 @@
+body {
+    max-width: 100%;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+.container {
+    max-width: 100%; /* Максимальная ширина контейнера не превысит ширину экрана */
+    overflow-x: hidden; /* Предотвращает горизонтальный скроллинг */
+}
+
+
+
+.header-height {
+    max-height: 90px;
+    height: 90px;
+}
+
+.header {
+    position: relative;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+    width: 100%;
+    z-index: 50;
+}
+
+.header * {
+    position: relative; /* Наследование для вложенных элементов */
+    z-index: 51; /* Повышение z-index для вложенных элементов */
+}
+
+.top-section-main {
+    height: 100vh;
+    min-height: 595px;
+    margin-top: -90px;
+    background-color: rgba(2, 0, 0, 0.6);
+}
+
+.top-section {
+    background: url(/images/main-image.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    min-height: 595px;
+    margin-top: -90px;
+    z-index: 5;
+}
+
+
+.top-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(2, 0, 0, 0.6); /* Прозрачность и цвет дымки */
+    z-index: 10;
+}
+
+
+
+
+.navbar {
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 22px;
+}
+
+.nav-link {
+    color: #c4c4c4 !important;
+}
+
+.active-menu {
+    color: #ffffff !important;
+}
+
+.nav-link {
+    text-decoration:none;
+    /*display: inline-block;*/
+    line-height: 1;
+}
+
+.nav-link:after {
+    display: block; /*превращаем его в блочный элемент*/
+    content: ""; /*контента в данном блоке не будет поэтому в кавычках ничего не ставим*/
+    height: 3px; /*задаём высоту линии*/
+    width: 0%; /*задаём начальную ширину элемента (линии)*/
+    background-color: #ffffff; /*цвет фона элемента*/
+    transition: width 0.4s ease-in-out; /*данное свойство отвечает за плавное изменение ширины. Здесь можно задать время анимации в секундах (в данном случае задано 0.4 секунды)*/
+}
+
+.nav-link:hover:after,
+.nav-link:focus:after {
+    width: 100%;
+}
+
+.nav-link:hover{
+    color:#ffffff;
+}
+
+.main-top-container {
+    position: relative;
+    top: 200px;
+    z-index: 15;
+}
+
+.main-top-container * {
+    z-index: 20;
+}
+
+.search-box {
+    height: 80px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+}
+
+.search-border {
+    border-radius: 10px;
+    border: 1px solid rgba(180, 180, 180, 0.95);
+    height: 60px;
+}
+
+.search-input {
+    font-size: 20px;
+}
+
+.search-button {
+    background-color: #537cd9;
+    transition: 1s;
+}
+
+.search-button:hover {
+    background-color: #3d6acb;
+    transition: 1s;
+}
+
+.category-section {
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.category-box {
+    background: #f2f1f0;
+    display: block;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    height: 100px;
+}
+
+.span {
+    font-size: 22px;
+    color: #000;
+    text-align: center;
+    justify-content: center;
+}
+
+.main-text {
+    color: #FFFFFF;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 70px;
+    padding-bottom: 50px;
+    font-weight: bold;
+    line-height: 1.2em;
+}
+
+/*.category-container {*/
+/*    max-width: 80%;*/
+/*}*/
+
+.category-title {
+
+}
+
+.category-car {
+    width: 150px;
+    margin-left: 40px;
+    margin-top: -10px;
+}
+
+.category-phone {
+    width: 100px;
+    margin-left: 60px;
+    margin-top: -10px;
+}
+
+.category-job {
+    width: 55px;
+    margin-left: 84px;
+    margin-top: -10px;
+}
+
+.category-estate {
+    width: 120px;
+    margin-left: 50px;
+    margin-top: -10px;
+}
+
+.category-key {
+    width: 100px;
+    margin-left: 60px;
+}
+
+.category-pats {
+    width: 100px;
+    margin-left: 60px;
+    margin-top: 10px;
+}
+
+.category-box a {
+    text-decoration: none;
+}
+
+.category-box:hover {
+    background: #f2f1f0;
+}
+
+/*.ads-container {*/
+/*    display: flex;*/
+/*}*/
+
+/*.ads-img-box {*/
+/*    height: 70%;*/
+/*    width: 100%;*/
+/*}*/
+
+/*.ads-img {*/
+/*    width: 100%;*/
+/*    height: 12vw;*/
+/*    object-fit: cover;*/
+/*}*/
+
+/*.ads-text {*/
+/*    position: relative;*/
+/*    padding: 8px 8px 8px 0;*/
+/*    box-sizing: border-box;*/
+/*    width: 100%;*/
+/*}*/
+
+.main-separator {
+    color: #374b5c;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.card-section {
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.border-gray {
+    border: 1px solid #dfe1e5 !important;
+}
+
+.card-title {
+    font-weight: 600;
+    font-size: 25px;
+    margin-bottom: 0;
+}
+
+.card-text {
+    font-size: 18px;
+}
+
+.border-round {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ffffff;
+}
+
+.card-img-top {
+    height: 160px;
+    -o-object-fit: cover;
+       object-fit: cover;
+}
+
+.ads-location {
+    width: 15px !important;
+    height: 15px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s ease-in-out;
+    background-color: #537cd9;
+}
+
+.text-muted {
+    font-size: 13px;
+    color: rgb(33 37 41 / 55%);
+}
+
