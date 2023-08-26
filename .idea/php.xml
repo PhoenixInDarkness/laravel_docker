@@ -134,11 +134,16 @@
       <path value="$PROJECT_DIR$/app/vendor/symfony/process" />
       <path value="$PROJECT_DIR$/app/vendor/symfony/polyfill-uuid" />
       <path value="$PROJECT_DIR$/app/vendor/laravel/breeze" />
+      <path value="$PROJECT_DIR$/app/vendor/laravel/socialite" />
+      <path value="$PROJECT_DIR$/app/vendor/league/oauth1-client" />
+      <path value="$PROJECT_DIR$/app/vendor/cocur/slugify" />
+      <path value="$PROJECT_DIR$/app/vendor/cviebrock/eloquent-sluggable" />
+      <path value="$PROJECT_DIR$/app/vendor/_laravel_idea" />
     </include_path>
   </component>
   <component name="PhpInterpreters">
     <interpreters>
-      <interpreter id="a9334806-0187-4094-8c66-488173529c1b" name="pikoba-php:latest" home="docker://DATA" false="false" debugger_id="php.debugger.XDebug">
+      <interpreter id="a9334806-0187-4094-8c66-488173529c1b" name="pikoba-php:latest" home="docker://DATA" auto="false" debugger_id="php.debugger.XDebug">
         <remote_data INTERPRETER_PATH="php" HELPERS_PATH="/opt/.phpstorm_helpers" VALID="true" RUN_AS_ROOT_VIA_SUDO="false" DOCKER_ACCOUNT_NAME="Docker" DOCKER_IMAGE_NAME="pikoba-php:latest" DOCKER_REMOTE_PROJECT_PATH="/opt/project" />
       </interpreter>
     </interpreters>
@@ -198,7 +203,7 @@
       </interpreter>
     </phpInfoCache>
   </component>
-  <component name="PhpProjectSharedConfiguration" php_language_level="8.2" />
+  <component name="PhpProjectSharedConfiguration" php_language_level="8.0" />
   <component name="PhpStanOptionsConfiguration">
     <option name="transferred" value="true" />
   </component>

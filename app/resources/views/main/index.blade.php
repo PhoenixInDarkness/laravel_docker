@@ -3,16 +3,18 @@
 @section('content')
     <div class="top-section-main border-bottom border-dark">
         <div class="top-section">
-            <div class="container main-top-container">
-                <div class="col-md-8 m-auto d-flex text-center">
-                    <span class="d-flex align-items-center main-text">Find what you need around</span>
-                </div>
-                <div class="search-section">
-                    <div class="search-box col-md-7 m-auto d-flex row align-center">
-                        <input class="col-md-10 search-border m-auto search-input m-">
-                        <button class="col-md-1 search-border m-auto search-button">
-                            <img src="/images/search.png" alt="">
-                        </button>
+            <div class="w-100 h-100 top-section-blur d-flex">
+                <div class="m-auto">
+                    <div class="col-md-8 m-auto d-flex text-center">
+                        <span class="d-flex align-items-center main-text main-top-text mx-auto">Find what you need around</span>
+                    </div>
+                    <div class="search-section mx-auto">
+                        <div class="search-box m-auto d-flex col align-center bg-transparent mx-4">
+                            <input class="border-gray focus-ring shadow-none border-end-0 p-2 search-border-tl-bl m-auto search-input w-75">
+                            <button class="border-gray border-start-0 p-2 search-border-tr-br m-auto search-button w-25">
+                                <img src="/images/search.png" alt="">
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -44,17 +44,20 @@ body {
     z-index: 5;
 }
 
-
-.top-section::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(2, 0, 0, 0.6); /* Прозрачность и цвет дымки */
-    z-index: 10;
+.top-section-blur {
+    background-color: rgba(2, 0, 0, 0.6);
 }
+
+/*.top-section::before {*/
+/*    content: "";*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    background-color: rgba(2, 0, 0, 0.6); !* Прозрачность и цвет дымки *!*/
+/*    z-index: 10;*/
+/*}*/
 
 
 
@@ -64,12 +67,19 @@ body {
     font-size: 22px;
 }
 
+#navbarNav {
+    background-color: #32353e !important;
+    transition: max-width 0.3s;
+    overflow: hidden;
+}
+
 .nav-link {
     color: #c4c4c4 !important;
 }
 
 .active-menu {
-    color: #ffffff !important;
+    font-weight: bold !important;
+    font-size: 12pt !important;
 }
 
 .nav-link {
@@ -106,6 +116,18 @@ body {
     z-index: 20;
 }
 
+.main-top-text {
+    @media (min-width: 1024px) {
+        font-size: 50pt !important;
+    }
+
+    @media (min-width: 768px) {
+        font-size: 45pt !important;
+    }
+
+    font-size: 26pt !important;
+}
+
 .search-box {
     height: 80px;
     background-color: #FFFFFF;
@@ -116,6 +138,16 @@ body {
     border-radius: 10px;
     border: 1px solid rgba(180, 180, 180, 0.95);
     height: 60px;
+}
+
+.search-border-tl-bl {
+    border-radius: 5px 0 0 5px;
+    border-right: 0 !important;
+}
+
+.search-border-tr-br {
+    border-radius: 0 5px 5px 0;
+    border-left: 0 !important;
 }
 
 .search-input {
@@ -248,7 +280,7 @@ body {
 }
 
 .border-gray {
-    border: 1px solid #dfe1e5 !important;
+    border: 1px solid #32353e !important;
 }
 
 .card-title {
@@ -279,7 +311,7 @@ body {
 .card-img-top {
     height: 160px;
     -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
 }
 
 .ads-location {
@@ -295,6 +327,114 @@ body {
 
 .text-muted {
     font-size: 13px;
-    color: rgb(33 37 41 / 55%);
+    color: rgba(218, 218, 218, 0.55);
+}
+
+.main-separator, .card-title, .card-text {
+    color: #b7b8bb !important;
+}
+
+.black-categories-panel {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    max-width: 1050px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    max-height: 36px;
+    overflow-y: hidden;
+}
+
+.black-categories {
+    background: #32353e;
+    border-radius: 20px;
+    color: #b7b8bb;
+    cursor: pointer;
+    display: flex;
+    flex-grow: 1;
+    font-size: 14px;
+    height: 36px;
+    justify-content: center;
+    line-height: 20px;
+    margin-bottom: 8px;
+    margin-right: 8px;
+    padding: 8px 12px;
+    white-space: nowrap;
+    width: -moz-fit-content;
+    width: fit-content;
+}
+
+
+
+.bg-darkness {
+    --bs-bg-opacity: 1;
+    background-color: #282b31 !important;
+}
+
+.bg-d-light {
+    background: #32353e;
+}
+
+.text-bg-darkness {
+    color: #b7b8bb !important;
+}
+
+.bg-d-black {
+    background-color: #1b1e23;
+}
+
+.bg-select {
+    background-color: #25282d !important;
+}
+
+.border-radius-left {
+    border-bottom-left-radius: 0.375rem;
+    border-top-left-radius: 0.375rem;
+}
+
+.left-radius-none {
+    border-bottom-left-radius: 0 !important;
+    border-top-left-radius: 0 !important;
+}
+
+input, textarea {
+    background-color: #25282d !important;
+    color: #b7b8bb !important;
+}
+
+input::-moz-placeholder {
+    color: #b7b8bb !important; /* Замените на желаемый цвет */
+}
+
+input::placeholder {
+    color: #b7b8bb !important; /* Замените на желаемый цвет */
+}
+
+input::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: #b7b8bb !important;
+}
+input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #b7b8bb !important;
+    opacity:  1;
+}
+input::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #b7b8bb !important;
+    opacity:  1;
+}
+input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color:    #b7b8bb !important;
+}
+input::-ms-input-placeholder { /* Microsoft Edge */
+    color:    #b7b8bb !important;
+}
+
+.fs-18 {
+    font-size: 18px !important;
+}
+
+.btn-warning {
+    background: linear-gradient(0deg, #fc8507, #ffa218);
 }
 
