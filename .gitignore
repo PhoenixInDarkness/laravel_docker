@@ -1,4 +1,3 @@
 docker/mysql
-.git
 .idea
-.idea/php.xml
+.git
