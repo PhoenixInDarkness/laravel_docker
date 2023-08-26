@@ -298,7 +298,7 @@ body {
     color: rgba(218, 218, 218, 0.55);
 }
 
-.main-separator, .card-title, .card-text {
+.main-separator, .card-title, .card-text, .user-name {
     color: #b7b8bb !important;
 }
 
@@ -330,6 +330,7 @@ body {
     margin-right: 8px;
     padding: 8px 12px;
     white-space: nowrap;
+    width: -moz-fit-content;
     width: fit-content;
 }
 
@@ -371,6 +372,10 @@ input, textarea {
     color: #b7b8bb !important;
 }
 
+input::-moz-placeholder {
+    color: #b7b8bb !important; /* Замените на желаемый цвет */
+}
+
 input::placeholder {
     color: #b7b8bb !important; /* Замените на желаемый цвет */
 }
@@ -399,4 +404,46 @@ input::-ms-input-placeholder { /* Microsoft Edge */
 
 .btn-warning {
     background: linear-gradient(0deg, #fc8507, #ffa218);
+}
+
+.border-radius-1 {
+    border-radius: 0.375rem;
+}
+
+.avatar {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.user-name {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.fs-16 {
+    font-size: 16px;
+}
+
+.round-40 {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.round-40-eye {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.white-image {
+    filter: brightness(0) invert(1);
+}
+
+.fs-24 {
+    font-size: 24px !important;
 }

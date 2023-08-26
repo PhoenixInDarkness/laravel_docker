@@ -7,6 +7,7 @@ use App\Models\Admin\Category;
 use App\Models\Admin\PropertyVariant;
 use App\Models\Photo;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AdsController extends Controller
 {
@@ -35,6 +36,7 @@ class AdsController extends Controller
             'category_id' => $all['category_id'],
             'price' => $all['price'],
             'city' => $all['city'],
+            'owner_id' => Auth::user()->id
         ];
 
         $ad = Ad::create($adData);

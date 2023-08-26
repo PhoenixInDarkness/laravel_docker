@@ -17,6 +17,7 @@ use App\Http\Controllers\AdsController;
 */
 
 Route::get('/', [MainController::class, 'index'])->name('home');
+Route::get('/ads/{id}', [MainController::class, 'view'])->name('ads_view');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
