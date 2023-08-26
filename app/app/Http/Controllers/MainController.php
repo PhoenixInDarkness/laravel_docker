@@ -11,6 +11,6 @@ class MainController extends Controller
     {
         $ads = Ad::all();
 
-        return view('main.index');
+        return view('main.index', compact('ads'));
     }
 }
