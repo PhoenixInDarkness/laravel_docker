@@ -105,15 +105,17 @@ body {
 }
 
 .navbar-lg {
-    @media (max-width: 992px) {
-        display: none;
-    }
-
     display: flex;
     flex-shrink: 0;
     flex-grow: 0;
     align-items: center;
     justify-content: flex-start;
+}
+
+@media (max-width: 992px) {
+    .navbar-lg {
+        display: none;
+    }
 }
 
 .nav-auth {
@@ -151,15 +153,19 @@ body {
 }
 
 .main-top-text {
-    @media (min-width: 1024px) {
-        font-size: 50pt !important;
-    }
+    font-size: 26pt !important;
+}
 
-    @media (min-width: 768px) {
+@media (min-width: 768px) {
+    .main-top-text {
         font-size: 45pt !important;
     }
+}
 
-    font-size: 26pt !important;
+@media (min-width: 1024px) {
+    .main-top-text {
+        font-size: 50pt !important;
+    }
 }
 
 .search-box {
