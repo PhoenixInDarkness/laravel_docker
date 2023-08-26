@@ -32,7 +32,9 @@ class AdsController extends Controller
         $adData = [
             'title' => $all['title'],
             'description' => $all['description'],
-            'category_id' => $all['category_id']
+            'category_id' => $all['category_id'],
+            'price' => $all['price'],
+            'city' => $all['city'],
         ];
 
         $ad = Ad::create($adData);
@@ -55,10 +57,11 @@ class AdsController extends Controller
 
         if ($request->hasFile('photos')) {
             foreach ($request->file('photos') as $photo) {
-                $file_path = $photo->store('photos'); // Путь для хранения файла
+                $path = $photo->store('public/photos');
+                $pathForDatabase = str_replace('public/', '', $path);
                 $photo = Photo::create([
                     'ad_id' => $ad->id,
-                    'file_path' => $file_path,
+                    'file_path' => $pathForDatabase,
                 ]);
 
                 $photos[] = $photo;

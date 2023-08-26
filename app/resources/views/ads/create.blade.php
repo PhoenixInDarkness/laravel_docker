@@ -17,7 +17,16 @@
                         <input name="{{$property->id}}" id="{{$property->id}}" type="text" class="form-control" placeholder="Enter {{$property->name}}">
                     </div>
                 @endforeach
-                <div class="d-flex flex-column">
+                <div class="form-group col-md-12 pb-3">
+                    <label class="pb-1 fs-18" for="price">Price</label>
+                    <input name="price" id="price" type="number" class="form-control" placeholder="Enter Price">
+                </div>
+                <div class="form-group col-md-12 pb-3">
+                    <label class="pb-1 fs-18" for="city">City</label>
+                    <input name="city" id="city" type="text" class="form-control" placeholder="Enter city name">
+                </div>
+                <div class="d-flex flex-column pb-3">
+                    <label class="pb-1 fs-18" for="photo-upload">Upload photos</label>
                     <div class="item-upload col-md-12">
                         <input id="photo-upload" type="file" name="photos[0]" multiple class="form-control col-md-12">
                     </div>
