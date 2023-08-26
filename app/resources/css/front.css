@@ -83,6 +83,7 @@ body {
 .nav-link-lg {
     color: #c4c4c4 !important;
     font-size: 16pt;
+    text-decoration:none;
 }
 
 .nav-link-lg.active-menu {
@@ -110,7 +111,7 @@ body {
 
 
 
-.nav-link:after {
+.nav-link-lg:after {
     display: block; /*превращаем его в блочный элемент*/
     content: ""; /*контента в данном блоке не будет поэтому в кавычках ничего не ставим*/
     height: 3px; /*задаём высоту линии*/
@@ -119,12 +120,12 @@ body {
     transition: width 0.4s ease-in-out; /*данное свойство отвечает за плавное изменение ширины. Здесь можно задать время анимации в секундах (в данном случае задано 0.4 секунды)*/
 }
 
-.nav-link:hover:after,
-.nav-link:focus:after {
+.nav-link-lg:hover:after,
+.nav-link-lg:focus:after {
     width: 100%;
 }
 
-.nav-link:hover{
+.nav-link-lg:hover{
     color:#ffffff;
 }
 
@@ -178,8 +179,10 @@ body {
 
 .search-input {
     font-size: 20px;
+}
 
-    @media (min-width: 992px) {
+@media (min-width: 992px) {
+    .search-input {
         width: 80%;
     }
 }
@@ -392,7 +395,6 @@ body {
     margin-right: 8px;
     padding: 8px 12px;
     white-space: nowrap;
-    width: -moz-fit-content;
     width: fit-content;
 }
 

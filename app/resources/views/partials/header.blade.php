@@ -5,7 +5,7 @@
     <div class="container">
         <div class="header-height d-flex flex-row align-items-center">
             <div class="d-flex justify-content-start align-items-center">
-                <img class="logo" src="images/logo.svg" alt="" style="width: 150px; height: auto;">
+                <img class="logo" src="{{asset('/images/logo.svg')}}" alt="" style="width: 150px; height: auto;">
             </div>
             <nav class="navbar-lg ms-4 w-100">
                 <a class="nav-link-lg mx-3 {{ setActive('home') }}" href="{{ route('home') }}">Home</a>
@@ -13,12 +13,12 @@
                 <a class="nav-link-lg mx-3" href="#">About Us</a>
                 <a class="nav-link-lg mx-3" href="#">Contact Us</a>
                 @if(Auth::check())
-                    <div class="ms-auto" style="margin-right: 11rem !important;">
+                    <div class="ms-auto d-flex" style="margin-right: 11rem !important;">
                         <a class="nav-link-lg mx-3" href="{{ route('new.listing') }}">Create New Listing</a>
                         <a class="nav-link-lg mx-3" href="{{ route('logout') }}">Logout</a>
                     </div>
                 @else
-                    <div class="ms-auto" style="margin-right: 11rem !important;">
+                    <div class="ms-auto d-flex" style="margin-right: 11rem !important;">
                         <a class="nav-link-lg mx-3" href="{{ route('login') }}">Login</a>
                         <a class="nav-link-lg mx-3" href="{{ route('register') }}">Register</a>
                     </div>
