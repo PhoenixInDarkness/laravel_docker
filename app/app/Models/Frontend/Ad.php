@@ -1,13 +1,11 @@
 <?php
 
-namespace App\Models\Admin;
+namespace App\Models\Frontend;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class CategoryProperty extends Model
+class Ad extends Model
 {
     use HasFactory;
-
-    protected $fillable = ['category_id', 'property_id'];
 }

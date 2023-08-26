@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('content')
-    <div class="top-section-main">
+    <div class="top-section-main border-bottom border-dark">
         <div class="top-section">
             <div class="container main-top-container">
                 <div class="col-md-8 m-auto d-flex text-center">
@@ -18,268 +18,194 @@
             </div>
         </div>
     </div>
-    <div class="container content-after-top-section">
-        <div class="category-container m-auto col-md-12">
-            <div class="category-section pt-10 mt-5 d-flex col-md-12">
-                <div class="col-md-3">
-                    <div class="category-box mx-5 px-4 py-2">
-                        <a href="#">
-                            <span class="span category-title">Vehicles</span>
-                            <img class="category-car" src="/images/categories/car.png" alt="">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="category-box mx-5 px-4 py-2">
-                        <span class="span category-title">Gadgets</span>
-                        <img class="category-phone" src="/images/categories/phone.svg" alt="">
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="category-box mx-5 px-4 py-2">
-                        <span class="span category-title">Jobs</span>
-                        <img class="category-job" src="/images/categories/job.svg" alt="">
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="category-box mx-5 px-4 py-2">
-                        <span class="span category-title">Job applicant</span>
-                        <img class="category-phone" src="/images/categories/notepad.svg" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="category-section pt-10 mt-5 d-flex col-md-12">
-                <div class="col-md-3">
-                    <div class="category-box mx-5 px-4 py-2">
-                        <span class="span category-title">Real estate</span>
-                        <img class="category-estate" src="/images/categories/house.svg" alt="">
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="category-box mx-5 px-4 py-2">
-                        <span class="span category-title">Service</span>
-                        <img class="category-phone" src="/images/categories/service.svg" alt="">
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="category-box mx-5 px-4 py-2">
-                        <span class="span category-title">Accommodation</span>
-                        <img class="category-key" src="/images/categories/key.svg" alt="">
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="category-box mx-5 px-4 py-2">
-                        <span class="span category-title">Parts</span>
-                        <img class="category-pats" src="/images/categories/parts.svg" alt="">
-                    </div>
-                </div>
-            </div>
+    <div class="bg-darkness w-100" style="max-width: 100%;">
+        <div class="col-md-12 m-auto text-center pt-3 pb-5">
+            <h2 class="mt-3 pt-3 main-separator">Featured ads</h2>
         </div>
-        <div class="col-md-12 m-auto text-center p-5">
-            <h2 class="mt-5 pt-5 main-separator">Featured ads</h2>
-        </div>
-        <div class="m-auto col-md-12 d-flex row card-section">
-            <div class="col-md-3 px-4 pb-5">
-                <div class="card px-0 border-gray">
-                    <img class="card-img-top" src="/images/test.jpeg">
-                    <div class="card-body">
-                        <p class="card-title">&euro; 120</p>
-                        <p class="card-text mb-0">Cars for rent</p>
-                        <small class="text-muted">London</small>
+        <div class="container">
+            <div class="m-auto col-md-12 d-flex row card-section">
+                <div class="col-md-12 black-categories-panel px-4 mb-5">
+                    <li class="black-categories">Vehicles</li>
+                    <li class="black-categories">Gadgets</li>
+                    <li class="black-categories">Jobs</li>
+                    <li class="black-categories">Job applicant</li>
+                    <li class="black-categories">Real estate</li>
+                    <li class="black-categories">Service</li>
+                    <li class="black-categories">Accommodation</li>
+                    <li class="black-categories">Parts</li>
+                </div>
+                <div class="col-md-3 px-4 pb-5">
+                    <div class="card px-0 border-gray bg-darkness">
+                        <img class="card-img-top" src="/images/test.jpeg">
+                        <div class="card-body">
+                            <p class="card-title">&euro; 120</p>
+                            <p class="card-text mb-0">Cars for rent</p>
+                            <small class="text-white-50">London</small>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-3 px-4 pb-5">
-                <div class="card px-0 border-gray">
-                    <img class="card-img-top" src="/images/car2.jpg">
-                    <div class="card-body">
-                        <p class="card-title">&euro; 120</p>
-                        <p class="card-text mb-0">aston martin victor</p>
-                        <small class="text-muted">London</small>
+                <div class="col-md-3 px-4 pb-5">
+                    <div class="card px-0 border-gray bg-darkness">
+                        <img class="card-img-top" src="/images/car2.jpg">
+                        <div class="card-body">
+                            <p class="card-title">&euro; 120</p>
+                            <p class="card-text mb-0">aston martin victor</p>
+                            <small class="text-white-50">London</small>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-3 px-4 pb-5">
-                <div class="card px-0 border-gray">
-                    <img class="card-img-top" src="/images/test.jpeg">
-                    <div class="card-body">
-                        <p class="card-title">&euro; 120</p>
-                        <p class="card-text mb-0">Cars for rent</p>
-                        <small class="text-muted">London</small>
+                <div class="col-md-3 px-4 pb-5">
+                    <div class="card px-0 border-gray bg-darkness">
+                        <img class="card-img-top" src="/images/test.jpeg">
+                        <div class="card-body">
+                            <p class="card-title">&euro; 120</p>
+                            <p class="card-text mb-0">Cars for rent</p>
+                            <small class="text-white-50">London</small>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-3 px-4 pb-5">
-                <div class="card px-0 border-gray">
-                    <img class="card-img-top" src="/images/car2.jpg">
-                    <div class="card-body">
-                        <p class="card-title">&euro; 120</p>
-                        <p class="card-text mb-0">aston martin victor</p>
-                        <small class="text-muted">London</small>
+                <div class="col-md-3 px-4 pb-5">
+                    <div class="card px-0 border-gray bg-darkness">
+                        <img class="card-img-top" src="/images/car2.jpg">
+                        <div class="card-body">
+                            <p class="card-title">&euro; 120</p>
+                            <p class="card-text mb-0">aston martin victor</p>
+                            <small class="text-white-50">London</small>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-3 px-4 pb-5">
-                <div class="card px-0 border-gray">
-                    <img class="card-img-top" src="/images/test.jpeg">
-                    <div class="card-body">
-                        <p class="card-title">&euro; 120</p>
-                        <p class="card-text mb-0">Cars for rent</p>
-                        <small class="text-muted">London</small>
+                <div class="col-md-3 px-4 pb-5">
+                    <div class="card px-0 border-gray bg-darkness">
+                        <img class="card-img-top" src="/images/test.jpeg">
+                        <div class="card-body">
+                            <p class="card-title">&euro; 120</p>
+                            <p class="card-text mb-0">Cars for rent</p>
+                            <small class="text-white-50">London</small>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-3 px-4 pb-5">
-                <div class="card px-0 border-gray">
-                    <img class="card-img-top" src="/images/car2.jpg">
-                    <div class="card-body">
-                        <p class="card-title">&euro; 120</p>
-                        <p class="card-text mb-0">aston martin victor</p>
-                        <small class="text-muted">London</small>
+                <div class="col-md-3 px-4 pb-5">
+                    <div class="card px-0 border-gray bg-darkness">
+                        <img class="card-img-top" src="/images/car2.jpg">
+                        <div class="card-body">
+                            <p class="card-title">&euro; 120</p>
+                            <p class="card-text mb-0">aston martin victor</p>
+                            <small class="text-white-50">London</small>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-3 px-4 pb-5">
-                <div class="card px-0 border-gray">
-                    <img class="card-img-top" src="/images/test.jpeg">
-                    <div class="card-body">
-                        <p class="card-title">&euro; 120</p>
-                        <p class="card-text mb-0">Cars for rent</p>
-                        <small class="text-muted">London</small>
+                <div class="col-md-3 px-4 pb-5">
+                    <div class="card px-0 border-gray bg-darkness">
+                        <img class="card-img-top" src="/images/test.jpeg">
+                        <div class="card-body">
+                            <p class="card-title">&euro; 120</p>
+                            <p class="card-text mb-0">Cars for rent</p>
+                            <small class="text-white-50">London</small>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-3 px-4 pb-5">
-                <div class="card px-0 border-gray">
-                    <img class="card-img-top" src="/images/car2.jpg">
-                    <div class="card-body">
-                        <p class="card-title">&euro; 120</p>
-                        <p class="card-text mb-0">aston martin victor</p>
-                        <small class="text-muted">London</small>
+                <div class="col-md-3 px-4 pb-5">
+                    <div class="card px-0 border-gray bg-darkness">
+                        <img class="card-img-top" src="/images/car2.jpg">
+                        <div class="card-body">
+                            <p class="card-title">&euro; 120</p>
+                            <p class="card-text mb-0">aston martin victor</p>
+                            <small class="text-white-50">London</small>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-3 px-4 pb-5">
-                <div class="card px-0 border-gray">
-                    <img class="card-img-top" src="/images/test.jpeg">
-                    <div class="card-body">
-                        <p class="card-title">&euro; 120</p>
-                        <p class="card-text mb-0">Cars for rent</p>
-                        <small class="text-muted">London</small>
+                <div class="col-md-3 px-4 pb-5">
+                    <div class="card px-0 border-gray bg-darkness">
+                        <img class="card-img-top" src="/images/test.jpeg">
+                        <div class="card-body">
+                            <p class="card-title">&euro; 120</p>
+                            <p class="card-text mb-0">Cars for rent</p>
+                            <small class="text-white-50">London</small>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-3 px-4 pb-5">
-                <div class="card px-0 border-gray">
-                    <img class="card-img-top" src="/images/car2.jpg">
-                    <div class="card-body">
-                        <p class="card-title">&euro; 120</p>
-                        <p class="card-text mb-0">aston martin victor</p>
-                        <small class="text-muted">London</small>
+                <div class="col-md-3 px-4 pb-5">
+                    <div class="card px-0 border-gray bg-darkness">
+                        <img class="card-img-top" src="/images/car2.jpg">
+                        <div class="card-body">
+                            <p class="card-title">&euro; 120</p>
+                            <p class="card-text mb-0">aston martin victor</p>
+                            <small class="text-white-50">London</small>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-3 px-4 pb-5">
-                <div class="card px-0 border-gray">
-                    <img class="card-img-top" src="/images/test.jpeg">
-                    <div class="card-body">
-                        <p class="card-title">&euro; 120</p>
-                        <p class="card-text mb-0">Cars for rent</p>
-                        <small class="text-muted">London</small>
+                <div class="col-md-3 px-4 pb-5">
+                    <div class="card px-0 border-gray bg-darkness">
+                        <img class="card-img-top" src="/images/test.jpeg">
+                        <div class="card-body">
+                            <p class="card-title">&euro; 120</p>
+                            <p class="card-text mb-0">Cars for rent</p>
+                            <small class="text-white-50">London</small>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-3 px-4 pb-5">
-                <div class="card px-0 border-gray">
-                    <img class="card-img-top" src="/images/car2.jpg">
-                    <div class="card-body">
-                        <p class="card-title">&euro; 120</p>
-                        <p class="card-text mb-0">aston martin victor</p>
-                        <small class="text-muted">London</small>
+                <div class="col-md-3 px-4 pb-5">
+                    <div class="card px-0 border-gray bg-darkness">
+                        <img class="card-img-top" src="/images/car2.jpg">
+                        <div class="card-body">
+                            <p class="card-title">&euro; 120</p>
+                            <p class="card-text mb-0">aston martin victor</p>
+                            <small class="text-white-50">London</small>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-3 px-4 pb-5">
-                <div class="card px-0 border-gray">
-                    <img class="card-img-top" src="/images/test.jpeg">
-                    <div class="card-body">
-                        <p class="card-title">&euro; 120</p>
-                        <p class="card-text mb-0">Cars for rent</p>
-                        <small class="text-muted">London</small>
+                <div class="col-md-3 px-4 pb-5">
+                    <div class="card px-0 border-gray bg-darkness">
+                        <img class="card-img-top" src="/images/test.jpeg">
+                        <div class="card-body">
+                            <p class="card-title">&euro; 120</p>
+                            <p class="card-text mb-0">Cars for rent</p>
+                            <small class="text-white-50">London</small>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-3 px-4 pb-5">
-                <div class="card px-0 border-gray">
-                    <img class="card-img-top" src="/images/car2.jpg">
-                    <div class="card-body">
-                        <p class="card-title">&euro; 120</p>
-                        <p class="card-text mb-0">aston martin victor</p>
-                        <small class="text-muted">London</small>
+                <div class="col-md-3 px-4 pb-5">
+                    <div class="card px-0 border-gray bg-darkness">
+                        <img class="card-img-top" src="/images/car2.jpg">
+                        <div class="card-body">
+                            <p class="card-title">&euro; 120</p>
+                            <p class="card-text mb-0">aston martin victor</p>
+                            <small class="text-white-50">London</small>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-3 px-4 pb-5">
-                <div class="card px-0 border-gray">
-                    <img class="card-img-top" src="/images/test.jpeg">
-                    <div class="card-body">
-                        <p class="card-title">&euro; 120</p>
-                        <p class="card-text mb-0">Cars for rent</p>
-                        <small class="text-muted">London</small>
+                <div class="col-md-3 px-4 pb-5">
+                    <div class="card px-0 border-gray bg-darkness">
+                        <img class="card-img-top" src="/images/test.jpeg">
+                        <div class="card-body">
+                            <p class="card-title">&euro; 120</p>
+                            <p class="card-text mb-0">Cars for rent</p>
+                            <small class="text-white-50">London</small>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-3 px-4 pb-5">
-                <div class="card px-0 border-gray">
-                    <img class="card-img-top" src="/images/car2.jpg">
-                    <div class="card-body">
-                        <p class="card-title">&euro; 120</p>
-                        <p class="card-text mb-0">aston martin victor</p>
-                        <small class="text-muted">London</small>
+                <div class="col-md-3 px-4 pb-5">
+                    <div class="card px-0 border-gray bg-darkness">
+                        <img class="card-img-top" src="/images/car2.jpg">
+                        <div class="card-body">
+                            <p class="card-title">&euro; 120</p>
+                            <p class="card-text mb-0">aston martin victor</p>
+                            <small class="text-white-50">London</small>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-3 px-4 pb-5">
-                <div class="card px-0 border-gray">
-                    <img class="card-img-top" src="/images/test.jpeg">
-                    <div class="card-body">
-                        <p class="card-title">&euro; 120</p>
-                        <p class="card-text mb-0">Cars for rent</p>
-                        <small class="text-muted">London</small>
+                <div class="col-md-3 px-4 pb-5">
+                    <div class="card px-0 border-gray bg-darkness">
+                        <img class="card-img-top" src="/images/test.jpeg">
+                        <div class="card-body">
+                            <p class="card-title">&euro; 120</p>
+                            <p class="card-text mb-0">Cars for rent</p>
+                            <small class="text-white-50">London</small>
+                        </div>
                     </div>
                 </div>
+                <!-- End of card block repetition -->
             </div>
-            <div class="col-md-3 px-4 pb-5">
-                <div class="card px-0 border-gray">
-                    <img class="card-img-top" src="/images/car2.jpg">
-                    <div class="card-body">
-                        <p class="card-title">&euro; 120</p>
-                        <p class="card-text mb-0">aston martin victor</p>
-                        <small class="text-muted">London</small>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 px-4 pb-5">
-                <div class="card px-0 border-gray">
-                    <img class="card-img-top" src="/images/test.jpeg">
-                    <div class="card-body">
-                        <p class="card-title">&euro; 120</p>
-                        <p class="card-text mb-0">Cars for rent</p>
-                        <small class="text-muted">London</small>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 px-4 pb-5">
-                <div class="card px-0 border-gray">
-                    <img class="card-img-top" src="/images/car2.jpg">
-                    <div class="card-body">
-                        <p class="card-title">&euro; 120</p>
-                        <p class="card-text mb-0">aston martin victor</p>
-                        <small class="text-muted">London</small>
-                    </div>
-                </div>
-            </div>
-
 
         </div>
     </div>

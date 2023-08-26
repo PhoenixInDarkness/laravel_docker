@@ -2,11 +2,11 @@
 
 namespace App\Models\Admin;
 
+use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Cviebrock\EloquentSluggable\Sluggable;
 
-class Ad extends Model
+class PropertyVariant extends Model
 {
     use HasFactory;
     use Sluggable;
@@ -20,5 +20,5 @@ class Ad extends Model
         ];
     }
 
-    protected $fillable = ['title', 'description', 'category_id', 'block'];
+    protected $fillable = ['ad_id', 'property_id', 'value'];
 }

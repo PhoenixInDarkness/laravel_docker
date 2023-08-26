@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\AdsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,6 +26,10 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+    Route::get('/new-listing', [AdsController::class, 'selectCategory'])->name('new.listing');
+    Route::get('/ad-create', [AdsController::class, 'create'])->name('add_ad');
+    Route::post('/ad-store', [AdsController::class, 'store'])->name('store_ad');
 });
 
 Route::group(['prefix' => 'admin'], function () {
@@ -32,3 +37,4 @@ Route::group(['prefix' => 'admin'], function () {
 });
 
 require __DIR__.'/auth.php';
+require __DIR__.'/social.php';

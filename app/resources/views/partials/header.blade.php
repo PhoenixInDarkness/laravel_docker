@@ -37,17 +37,22 @@
                 </nav>
             </div>
             <div class="col-md-4">
-                <nav class="navbar navbar-expand-lg header-height ">
-                    <div class="collapse navbar-collapse flex-row-reverse" id="navbarNav">
-                        <ul class="navbar-nav">
-                            <li class="nav-item mx-2">
-                                <a class="nav-link {{ setActive('login') }}" href="{{ route('login') }}">Login</a>
-                            </li>
-                            <li class="nav-item mx-2">
-                                <a class="nav-link {{ setActive('register') }}" href="{{ route('register') }}">Register</a>
-                            </li>
-                        </ul>
-                    </div>
+                <nav class="navbar navbar-expand-lg header-height d-flex flex-row-reverse">
+                    @if(\Illuminate\Support\Facades\Auth::check())
+                        <a href="{{ route('logout') }}" class="btn btn-warning header-button px-4 mx-2">Logout</a>
+                        <a href="{{ route('new.listing') }}" class="btn btn-primary header-button px-4 mx-2">Create New Listing</a>
+                    @else
+                        <div class="collapse navbar-collapse flex-row-reverse" id="navbarNav">
+                            <ul class="navbar-nav">
+                                <li class="nav-item mx-2">
+                                    <a class="nav-link {{ setActive('login') }}" href="{{ route('login') }}">Login</a>
+                                </li>
+                                <li class="nav-item mx-2">
+                                    <a class="nav-link {{ setActive('register') }}" href="{{ route('register') }}">Register</a>
+                                </li>
+                            </ul>
+                        </div>
+                    @endif
                 </nav>
             </div>
         </div>
