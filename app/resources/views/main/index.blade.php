@@ -9,9 +9,9 @@
                         <span class="d-flex align-items-center main-text main-top-text mx-auto">Find what you need around</span>
                     </div>
                     <div class="search-section mx-auto">
-                        <div class="search-box m-auto d-flex col align-center bg-transparent mx-4">
-                            <input class="border-gray focus-ring shadow-none border-end-0 p-2 search-border-tl-bl m-auto search-input w-75" autofocus>
-                            <button class="border-gray border-start-0 p-2 search-border-tr-br m-auto search-button w-25">
+                        <div class="search-box m-auto d-flex col align-center justify-content-center bg-transparent mx-4">
+                            <input class="border-gray focus-ring shadow-none border-end-0 p-3 search-border-tl-bl search-input h-75" autofocus>
+                            <button class="border-gray border-start-0 p-3 search-border-tr-br search-button h-75">
                                 <img src="/images/search.png" alt="">
                             </button>
                         </div>
