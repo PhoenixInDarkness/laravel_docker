@@ -755,6 +755,10 @@ select {
   margin-left: 1rem;
   margin-right: 1rem;
 }
+.mx-3 {
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
+}
 .-ml-px {
   margin-left: -1px;
 }
@@ -823,6 +827,15 @@ select {
 }
 .ml-auto {
   margin-left: auto;
+}
+.ms-4 {
+  margin-inline-start: 1rem;
+}
+.ms-auto {
+  margin-inline-start: auto;
+}
+.ms-5 {
+  margin-inline-start: 1.25rem;
 }
 .block {
   display: block;

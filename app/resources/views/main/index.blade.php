@@ -10,7 +10,7 @@
                     </div>
                     <div class="search-section mx-auto">
                         <div class="search-box m-auto d-flex col align-center bg-transparent mx-4">
-                            <input class="border-gray focus-ring shadow-none border-end-0 p-2 search-border-tl-bl m-auto search-input w-75">
+                            <input class="border-gray focus-ring shadow-none border-end-0 p-2 search-border-tl-bl m-auto search-input w-75" autofocus>
                             <button class="border-gray border-start-0 p-2 search-border-tr-br m-auto search-button w-25">
                                 <img src="/images/search.png" alt="">
                             </button>

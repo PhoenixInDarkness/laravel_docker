@@ -18,6 +18,7 @@ body {
 .header {
     position: relative;
     border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+    background: rgba(0, 0, 0, 0.6);
     width: 100%;
     z-index: 50;
 }
@@ -77,8 +78,15 @@ body {
     overflow: hidden;
 }
 
+#navbarBack {
+    z-index: 20; background: rgba(0, 0, 0, 0.5)
+}
+
 .nav-link {
     color: #c4c4c4 !important;
+    text-decoration:none;
+    /*display: inline-block;*/
+    line-height: 1;
 }
 
 .active-menu {
@@ -86,11 +94,33 @@ body {
     font-size: 12pt !important;
 }
 
-.nav-link {
-    text-decoration:none;
-    /*display: inline-block;*/
-    line-height: 1;
+.nav-link-lg {
+    color: #c4c4c4 !important;
+    font-size: 16pt;
 }
+
+.nav-link-lg.active-menu {
+    font-size: 16pt !important;
+    color: #ffffff !important;
+}
+
+.navbar-lg {
+    @media (max-width: 992px) {
+        display: none;
+    }
+
+    display: flex;
+    flex-shrink: 0;
+    flex-grow: 0;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.nav-auth {
+    color: #537cd9 !important;
+}
+
+
 
 .nav-link:after {
     display: block; /*превращаем его в блочный элемент*/

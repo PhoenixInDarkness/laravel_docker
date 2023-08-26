@@ -3,11 +3,28 @@
 </div>
 <header class="header header-height sticky-top">
     <div class="container">
-        <div class="header-height d-flex flex-row align-items-center justify-content-between">
+        <div class="header-height d-flex flex-row align-items-center">
             <div class="d-flex justify-content-start align-items-center">
                 <img class="logo" src="images/logo.svg" alt="" style="width: 150px; height: auto;">
             </div>
-            <div class="d-flex justify-content-end">
+            <nav class="navbar-lg ms-4 w-100">
+                <a class="nav-link-lg mx-3 {{ setActive('home') }}" href="{{ route('home') }}">Home</a>
+                <a class="nav-link-lg mx-3" href="#">Categories</a>
+                <a class="nav-link-lg mx-3" href="#">About Us</a>
+                <a class="nav-link-lg mx-3" href="#">Contact Us</a>
+                @if(Auth::check())
+                    <div class="ms-auto" style="margin-right: 11rem !important;">
+                        <a class="nav-link-lg mx-3" href="{{ route('new.listing') }}">Create New Listing</a>
+                        <a class="nav-link-lg mx-3" href="{{ route('logout') }}">Logout</a>
+                    </div>
+                @else
+                    <div class="ms-auto" style="margin-right: 11rem !important;">
+                        <a class="nav-link-lg mx-3" href="{{ route('login') }}">Login</a>
+                        <a class="nav-link-lg mx-3" href="{{ route('register') }}">Register</a>
+                    </div>
+                @endif
+            </nav>
+            <div class="d-flex justify-content-end w-100">
                 <nav class="navbar navbar-expand-lg header-height">
                     <button class="navbar-toggler bg-white justify-content-end" id="hamburgerNav">
                         <span class="navbar-toggler-icon"></span>
@@ -16,7 +33,7 @@
             </div>
         </div>
     </div>
-    <div class="position-absolute vh-100 w-100 d-none" id="navbarBack" style="z-index: 20; background: rgba(0, 0, 0, 0.5)"></div>
+    <div class="position-absolute vh-100 w-100 d-none" id="navbarBack"></div>
     <div class="position-fixed sticky w-100 rounded-1 vh-100" id="navbarNav" style="max-width: 0; z-index: 30" data-view="close">
         <ul class="navbar-nav pl-2">
             <li class="nav-item mx-2">
