@@ -33,7 +33,7 @@ return [
     'google' => [
         'client_id' => env('GOOGLE_CLIENT_ID'),
         'client_secret' => env('GOOGLE_CLIENT_SECRET'),
-        'redirect' => 'http://pikoba.ru/auth/google/callback',
+        'redirect' => 'http://druss.altos.fvds.ru/auth/google/callback',
     ],
 
 ];
