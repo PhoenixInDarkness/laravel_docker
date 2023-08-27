@@ -25,6 +25,8 @@
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/cviebrock/eloquent-sluggable" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/laravel/socialite" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/league/oauth1-client" />
+      <excludeFolder url="file://$MODULE_DIR$/app/storage/app" />
+      <excludeFolder url="file://$MODULE_DIR$/app/storage/framework" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

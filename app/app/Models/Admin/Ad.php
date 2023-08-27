@@ -4,13 +4,11 @@ namespace App\Models\Admin;
 
 use App\Models\Photo;
 use App\Models\User;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Cviebrock\EloquentSluggable\Sluggable;
 
 class Ad extends Model
 {
-    use HasFactory;
     use Sluggable;
 
     public function sluggable(): array
@@ -52,12 +50,12 @@ class Ad extends Model
         return $this->hasMany(Photo::class);
     }
 
-    public function owner()
+    public function owner(): \Illuminate\Database\Eloquent\Relations\BelongsTo
     {
         return $this->belongsTo(User::class);
     }
 
-    public function propertyVariants()
+    public function propertyVariants(): \Illuminate\Database\Eloquent\Relations\HasMany
     {
         return $this->hasMany(PropertyVariant::class);
     }

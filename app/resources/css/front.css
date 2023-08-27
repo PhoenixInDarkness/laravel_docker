@@ -309,7 +309,7 @@ body {
 
 .card-section {
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
 .border-gray {
@@ -587,4 +587,45 @@ input::-ms-input-placeholder { /* Microsoft Edge */
     background-color: #ffc107;
     border-color: #dee2e6;
     color: #000;
+}
+
+.ads-author-avatar {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    top: 110px;
+    z-index: 20
+}
+
+.ads-author-name {
+    color: #000;
+    font-weight: bold;
+    text-align: center;
+    font-size: 40pt;
+    margin-top: 10rem;
+}
+
+.ads-author-title-section {
+    text-align: center;
+    font-weight: bold;
+    font-size: 30pt;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.ads-count-badge {
+    margin-left: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #374B5C;
+    background-color: #FFB300;
+    height: 3rem;
+    border-radius: 40px;
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
 }
