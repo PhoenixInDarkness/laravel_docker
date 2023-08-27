@@ -585,23 +585,81 @@ input::-ms-input-placeholder { /* Microsoft Edge */
 }
 
 .ads-author-avatar {
-    width: 220px;
-    height: 220px;
     border-radius: 50%;
     overflow: hidden;
     position: relative;
-    top: 110px;
     z-index: 20;
-    -o-object-fit: cover;
     object-fit: cover;
+    -o-object-fit: cover;
+
+    width: 110px;
+    height: 110px;
+    top: 55px;
+    @media (min-width: 768px) {
+        width: 220px;
+        height: 220px;
+        top: 110px;
+    }
+}
+
+.ads-edit-button {
+    bottom: 100px;
+    border: 1px solid orange;
+    float: right;
+    position: relative;
+    background-color: #FFB300;
+    font-weight: 600;
+    border-radius: 20px;
+    display: block;
+    text-decoration: none;
+    text-decoration-color: unset;
+    -webkit-text-decoration-style: unset;
+    -webkit-text-decoration-color: unset;
+    -moz-text-decoration-color: unset;
+    -moz-text-decoration-line: unset;
+    -moz-text-decoration-style: unset;
+    color: #374B5C;
+
+    padding: 0.4rem 1.3rem;
+    font-size: 12pt;
+
+    @media (min-width: 768px) {
+        padding: 0.8rem 2rem;
+        font-size: 16pt;
+    }
+}
+
+.ads-edit-button:hover {
+    color: #000000;
 }
 
 .ads-author-name {
     color: #FFF;
     font-weight: bold;
     text-align: center;
-    font-size: 40pt;
-    margin-top: 10rem;
+    font-size: 20pt;
+    margin-top: 5rem;
+    @media (min-width: 768px) {
+        font-size: 40pt;
+        margin-top: 10rem;
+    }
+}
+
+.ads-author-contact {
+    color: #374B5C;
+    font-weight: bold;
+    text-align: center;
+    @media (min-width: 768px) {
+        font-size: 22pt;
+        margin-top: 1rem;
+    }
+}
+
+.ads-author-contact-icon {
+    @media (max-width: 425px) {
+        width: 2rem !important;
+        height: 2rem !important;
+    }
 }
 
 .ads-author-title-section {
@@ -625,6 +683,7 @@ input::-ms-input-placeholder { /* Microsoft Edge */
     border-radius: 40px;
     padding-left: 0.7rem;
     padding-right: 0.7rem;
+    font-size: 20pt;
 }
 
 .content {

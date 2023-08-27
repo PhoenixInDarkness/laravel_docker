@@ -4,7 +4,7 @@
 
         <div class="form-group">
             <div class="d-flex flex-column pb-3">
-                <label class="pb-1 fs-18" for="photo-upload">Upload avatar</label>
+                <label class="pb-1 fs-18 text-white" for="photo-upload">Upload avatar</label>
                 <div class="item-upload col-md-12">
                     <input id="photo-upload" type="file" name="avatar" class="form-control col-md-12">
                 </div>
