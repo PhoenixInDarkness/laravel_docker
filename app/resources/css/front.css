@@ -693,5 +693,5 @@ input::-ms-input-placeholder { /* Microsoft Edge */
 }
 
 .bg-light-body {
-    background-color: #3b3f46;
+    background-color: #3b3f46 !important;
 }
