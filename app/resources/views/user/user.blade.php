@@ -3,9 +3,9 @@
 @section('content')
     <div class="p-6">
         <section class="text-center">
-            <img class="ads-author-avatar" src="{{$user->avatar}}"/>
+            <img class="ads-author-avatar" src="{{ asset('/images/avatar.png') }}"/>
         </section>
-        <div class="card w-75 mx-auto">
+        <div class="card w-75 mx-auto bg-darkness text-bg-darkness border-gray">
             <div class="card-body">
                 <section class="ads-author-name">
                     {{$user->name}}
