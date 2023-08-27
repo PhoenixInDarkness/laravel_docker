@@ -16,19 +16,10 @@
     </head>
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-darkness">
-            @include('layouts.navigation')
-
-            <!-- Page Heading -->
-            @if (isset($header))
-                <header class="bg-white shadow">
-                    <div class="container py-6 px-4">
-                        {{ $header }}
-                    </div>
-                </header>
-            @endif
+            @include('partials.header')
 
             <!-- Page Content -->
-            <main class="d-flex flex-row min-vh-100">
+            <main class="d-flex flex-row min-vh-100 bg-light-body p-5">
                 @yield('content')
             </main>
         </div>
