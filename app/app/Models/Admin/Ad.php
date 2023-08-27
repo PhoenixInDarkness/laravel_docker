@@ -29,7 +29,7 @@ class Ad extends Model
         if ($this->photo()->first()) {
             return 'storage/' . $photo->file_path;
         } else {
-            return null;
+            return '/images/nopic.png';
         }
     }
 
