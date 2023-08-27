@@ -838,6 +838,9 @@ select {
 .ms-3 {
   margin-inline-start: 0.75rem;
 }
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
 .block {
   display: block;
 }
