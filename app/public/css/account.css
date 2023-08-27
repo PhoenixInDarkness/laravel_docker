@@ -393,11 +393,8 @@ video {
   background-color: #fff;
   border-color: #6b7280;
   border-width: 1px;
-  border-radius: 0px;
-  padding-top: 0.5rem;
-  padding-right: 0.75rem;
-  padding-bottom: 0.5rem;
-  padding-left: 0.75rem;
+  border-radius: 0;
+  padding: 0.5rem 0.75rem;
   font-size: 1rem;
   line-height: 1.5rem;
   --tw-shadow: 0 0 #0000;
@@ -484,7 +481,7 @@ select {
 }
 
 [type='checkbox'] {
-  border-radius: 0px;
+  border-radius: 0;
 }
 
 [type='radio'] {
@@ -712,22 +709,25 @@ select {
   position: sticky;
 }
 .inset-0 {
-  inset: 0px;
+  inset: 0;
 }
 .left-0 {
-  left: 0px;
+  left: 0;
 }
 .right-0 {
-  right: 0px;
+  right: 0;
 }
 .top-0 {
-  top: 0px;
+  top: 0;
 }
 .z-0 {
   z-index: 0;
 }
 .z-50 {
   z-index: 50;
+}
+.m-5 {
+  margin: 1.25rem;
 }
 .m-auto {
   margin: auto;
@@ -767,7 +767,7 @@ select {
   margin-top: -1px;
 }
 .mb-0 {
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 .mb-2 {
   margin-bottom: 0.5rem;
@@ -899,7 +899,7 @@ select {
   max-width: 36rem;
 }
 .flex-1 {
-  flex: 1 1 0%;
+  flex: 1 1 0;
 }
 .origin-top {
   transform-origin: top;
@@ -1080,8 +1080,8 @@ select {
   padding: 1.5rem;
 }
 .px-0 {
-  padding-left: 0px;
-  padding-right: 0px;
+  padding-left: 0;
+  padding-right: 0;
 }
 .px-1 {
   padding-left: 0.25rem;
@@ -1163,6 +1163,9 @@ select {
 }
 .pt-3 {
   padding-top: 0.75rem;
+}
+.pt-5 {
+  padding-top: 1.25rem;
 }
 .pt-6 {
   padding-top: 1.5rem;
@@ -1804,7 +1807,7 @@ select {
   }
 
   .sm\:pt-0 {
-    padding-top: 0px;
+    padding-top: 0;
   }
 
   .sm\:text-left {
@@ -1826,7 +1829,7 @@ select {
   }
 
   .md\:border-t-0 {
-    border-top-width: 0px;
+    border-top-width: 0;
   }
 }
 @media (min-width: 1024px) {

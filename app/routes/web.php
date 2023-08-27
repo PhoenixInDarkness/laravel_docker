@@ -17,6 +17,7 @@ use App\Http\Controllers\AdsController;
 */
 
 Route::get('/', [MainController::class, 'index'])->name('home');
+Route::get('/ads/search/', [MainController::class, 'search'])->name('ads_search');
 Route::get('/ads/{slug}', [MainController::class, 'view'])->name('ads_view');
 
 Route::get('/user/{user}', [\App\Http\Controllers\UserController::class, 'show'])->name('user.show');

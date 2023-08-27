@@ -6,6 +6,7 @@ use App\Models\Admin\Ad;
 use App\Models\Admin\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class MainController extends Controller
 {
@@ -25,5 +26,20 @@ class MainController extends Controller
         $photos = $ad->getAllPhotos();
 
         return view('main.view', compact('ad', 'user', 'propertyVariants', 'photos'));
+    }
+
+    public function search(Request $request)
+    {
+        $search = strtolower($request->search??'');
+
+        if ($search === '') {
+            return redirect('/');
+        }
+
+        $ads = Ad::where(DB::raw('lower(title)'), 'like' , "%$search%")
+            ->paginate(20)
+            ->appends(['search' => $search]);
+
+        return view('main.search')->with(['ads' => $ads, 'search' => $search]);
     }
 }
