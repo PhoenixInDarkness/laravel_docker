@@ -17,7 +17,7 @@
                     </div>
                     <div class="m-auto d-flex row card-section mt-5">
                         @foreach($user->ads as $ad)
-                            <div class="col-md-3 px-4 pb-5">
+                            <div class="col-md-6 col-lg-4 col-xl-3 px-4 pb-5">
                                 <div class="card px-0 border-gray bg-darkness">
                                     <a href="{{ route('ads_view', ['id' => $ad->id]) }}" class="text-decoration-none">
                                         <img class="card-img-top" src="{{ asset($ad->getPreviewPhoto()) }}">
