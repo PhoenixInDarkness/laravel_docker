@@ -37,7 +37,7 @@
                                     <span class="col-md-12 user-name align-text-bottom">{{$user->name}}</span>
                                 </div>
                                 <div class="col-md-12">
-                                    <a class="col-md-12 fs-16 text-white-50 " href="#">
+                                    <a class="col-md-12 fs-16 text-white-50 " href="{{route('user.show', $user->id)}}">
                                         See all ads
                                     </a>
                                 </div>

@@ -79,6 +79,7 @@ body {
 .nav-link-lg {
     color: #c4c4c4 !important;
     font-size: 16pt;
+    text-decoration:none;
 }
 
 .nav-link-lg.active-menu {
@@ -87,15 +88,17 @@ body {
 }
 
 .navbar-lg {
-    @media (max-width: 992px) {
-        display: none;
-    }
-
     display: flex;
     flex-shrink: 0;
     flex-grow: 0;
     align-items: center;
     justify-content: flex-start;
+}
+
+@media (max-width: 992px) {
+    .navbar-lg {
+        display: none;
+    }
 }
 
 .nav-auth {
@@ -104,7 +107,7 @@ body {
 
 
 
-.nav-link:after {
+.nav-link-lg:after {
     display: block; /*превращаем его в блочный элемент*/
     content: ""; /*контента в данном блоке не будет поэтому в кавычках ничего не ставим*/
     height: 3px; /*задаём высоту линии*/
@@ -113,12 +116,12 @@ body {
     transition: width 0.4s ease-in-out; /*данное свойство отвечает за плавное изменение ширины. Здесь можно задать время анимации в секундах (в данном случае задано 0.4 секунды)*/
 }
 
-.nav-link:hover:after,
-.nav-link:focus:after {
+.nav-link-lg:hover:after,
+.nav-link-lg:focus:after {
     width: 100%;
 }
 
-.nav-link:hover{
+.nav-link-lg:hover{
     color:#ffffff;
 }
 
@@ -133,15 +136,19 @@ body {
 }
 
 .main-top-text {
-    @media (min-width: 1024px) {
-        font-size: 50pt !important;
-    }
+    font-size: 26pt !important;
+}
 
-    @media (min-width: 768px) {
+@media (min-width: 768px) {
+    .main-top-text {
         font-size: 45pt !important;
     }
+}
 
-    font-size: 26pt !important;
+@media (min-width: 1024px) {
+    .main-top-text {
+        font-size: 50pt !important;
+    }
 }
 
 .search-box {
@@ -168,8 +175,10 @@ body {
 
 .search-input {
     font-size: 20px;
+}
 
-    @media (min-width: 992px) {
+@media (min-width: 992px) {
+    .search-input {
         width: 80%;
     }
 }
@@ -296,7 +305,7 @@ body {
 
 .card-section {
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
 .border-gray {
@@ -350,7 +359,7 @@ body {
     color: rgba(218, 218, 218, 0.55);
 }
 
-.main-separator, .card-title, .card-text {
+.main-separator, .card-title, .card-text, .user-name {
     color: #b7b8bb !important;
 }
 
@@ -456,5 +465,60 @@ input::-ms-input-placeholder { /* Microsoft Edge */
 
 .btn-warning {
     background: linear-gradient(0deg, #fc8507, #ffa218);
+}
+
+.border-radius-1 {
+    border-radius: 0.375rem;
+}
+
+.avatar {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.user-name {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.fs-16 {
+    font-size: 16px;
+}
+
+.round-40 {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.round-40-eye {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.white-image {
+    filter: brightness(0) invert(1);
+}
+
+.fs-24 {
+    font-size: 24px !important;
+}
+
+.ads-count-badge {
+    margin-left: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #374B5C;
+    background-color: #FFB300;
+    height: 3rem;
+    border-radius: 40px;
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
 }
 
