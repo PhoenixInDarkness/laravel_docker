@@ -372,7 +372,6 @@ body {
     -webkit-user-select: none;
     -moz-user-select: none;
     user-select: none;
-    max-height: 36px;
     overflow-y: hidden;
 }
 
@@ -688,5 +687,16 @@ input::-ms-input-placeholder { /* Microsoft Edge */
     --bs-bg-opacity: 1;
     background-color: #282b31 !important;
     color: #b7b8bb !important;
+}
+
+.bg-light-body {
+    background-color: #3b3f46 !important;
+}
+
+.search-container {
+    padding: 2rem 2rem;
+    @media (min-width: 768px) {
+        padding: 2rem 8rem;
+    }
 }
 

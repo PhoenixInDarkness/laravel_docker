@@ -1,5 +1,18 @@
 @extends('layout')
 
+@section('script')
+    <script defer>
+        function search()
+        {
+            let input = document.getElementById("searchInput");
+
+            if (input.value !== '') {
+                location.replace('{{route('ads_search')}}' + '?search=' + input.value);
+            }
+        }
+    </script>
+@endsection
+
 @section('content')
     <div class="top-section-main border-bottom border-dark">
         <div class="top-section">
@@ -10,8 +23,8 @@
                     </div>
                     <div class="search-section mx-auto">
                         <div class="search-box m-auto d-flex col align-center justify-content-center bg-transparent mx-4">
-                            <input class="border-gray focus-ring shadow-none border-end-0 p-3 search-border-tl-bl search-input h-75" autofocus>
-                            <button class="border-gray border-start-0 p-3 search-border-tr-br search-button h-75">
+                            <input id="searchInput" class="border-gray focus-ring shadow-none border-end-0 p-3 search-border-tl-bl search-input h-75" autofocus>
+                            <button class="border-gray border-start-0 p-3 search-border-tr-br search-button h-75" onclick="search()">
                                 <img src="/images/search.png" alt="">
                             </button>
                         </div>
