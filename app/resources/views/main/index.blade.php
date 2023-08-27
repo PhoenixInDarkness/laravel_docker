@@ -2,12 +2,20 @@
 
 @section('script')
     <script defer>
-        function search()
+        function search(event)
         {
             let input = document.getElementById("searchInput");
 
-            if (input.value !== '') {
-                location.replace('{{route('ads_search')}}' + '?search=' + input.value);
+            if (event !== undefined && event.code === 'Enter') {
+                if (input.value !== '') {
+                    location.replace('{{route('ads_search')}}' + '?search=' + input.value);
+                }
+            }
+
+            if (event === undefined) {
+                if (input.value !== '') {
+                    location.replace('{{route('ads_search')}}' + '?search=' + input.value);
+                }
             }
         }
     </script>
@@ -22,9 +30,9 @@
                         <span class="d-flex align-items-center main-text main-top-text mx-auto">Find what you need around</span>
                     </div>
                     <div class="search-section mx-auto">
-                        <div class="search-box m-auto d-flex col align-center justify-content-center bg-transparent mx-4">
-                            <input id="searchInput" class="border-gray focus-ring shadow-none border-end-0 p-3 search-border-tl-bl search-input h-75" autofocus>
-                            <button class="border-gray border-start-0 p-3 search-border-tr-br search-button h-75" onclick="search()">
+                        <div class="search-box m-auto d-flex col align-center justify-content-center bg-transparent mx-4" onclick="search()">
+                            <input id="searchInput" class="border-gray focus-ring shadow-none border-end-0 p-3 search-border-tl-bl search-input h-75" onkeydown="search(event)" autofocus>
+                            <button class="border-gray border-start-0 p-3 search-border-tr-br search-button h-75" onclick="search()" type="button">
                                 <img src="/images/search.png" alt="">
                             </button>
                         </div>
@@ -53,7 +61,7 @@
                     <div class="col-md-3 px-4 pb-5">
                         <div class="card px-0 border-gray bg-darkness">
                             <a href="{{ route('ads_view', ['id' => $ad->id]) }}" class="text-decoration-none">
-                                <img class="card-img-top" src="{{ asset($ad->getPreviewPhoto()) }}">
+                                <img class="card-img-top" src="{{ asset($ad->getPreviewPhoto()) }}" alt="preview">
                                 <div class="card-body">
                                     <p class="card-title">&euro; {{$ad->price}}</p>
                                     <p class="card-text mb-0">{{ $ad->title }}</p>
