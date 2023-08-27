@@ -1,11 +1,11 @@
 <section>
     <header>
-        <h2 class="h5">
-            header
+        <h2 class="h5 text-white">
+            Update password
         </h2>
 
         <p class="mt-1">
-            'Ensure your account is using a long, random password to stay secure.'
+            Ensure your account is using a long, random password to stay secure.
         </p>
     </header>
 
