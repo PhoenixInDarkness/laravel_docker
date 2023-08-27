@@ -49,7 +49,7 @@
             <div class="m-auto col-md-12 d-flex row card-section">
                 <div class="col-md-12 black-categories-panel px-4 mb-5">
                     @foreach($categories as $category)
-                        <a href="#" class="text-decoration-none">
+                        <a href="{{route('ads_category', $category->slug)}}" class="text-decoration-none">
                             <li class="black-categories">{{ $category->name }}</li>
                         </a>
                     @endforeach
