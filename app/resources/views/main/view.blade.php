@@ -4,7 +4,7 @@
     <div class="bg-darkness w-100" style="max-width: 100%;">
         <div class="container">
             <div class="m-auto col-md-12 d-flex row card-section">
-                <div id="adsCarousel" class="carousel slide col-md-7 bg-d-black mt-5 border-radius-1" data-ride="carousel">
+                <div id="adsCarousel" class="carousel slide col-md-7 bg-d-black mt-5 border-radius-top" data-ride="carousel">
                     <ol class="carousel-indicators">
                         @foreach($photos as $photo)
                             <li data-target="#adsCarousel" data-slide-to="{{ $loop->index }}"></li>
@@ -60,6 +60,30 @@
                                 <button class="btn btn-primary fs-24 col-md-5">Email</button>
                             </div>
                         </div>
+                    </div>
+                </div>
+                <div class="border-radius-bottom border-gray col-md-7 px-5 py-5 text-bg-darkness mb-5">
+                    <div class="col-md-12 pb-4">
+                        <h2 class="bold fs-30">{{ $ad->title }}</h2>
+                    </div>
+                    <div class="col-md-12 pb-4">
+                        <li class="black-categories px-4">Vehicles</li>
+                    </div>
+                    <div class="col-md-12 pb-4">
+                        <span class="bold fs-30">&euro; {{ $ad->price }}</span>
+                    </div>
+                    <div class="col-md-12 pb-4">
+                        <h3 class="bold fs-24">Description</h3>
+                        <span class="fs-16">{{ $ad->description }}</span>
+                    </div>
+                    <div class="col-md-12 pb-4">
+                        <h3 class="bold fs-24">Characteristics</h3>
+                        @foreach($propertyVariants as $variant)
+                            <div class="col-md-12">
+                                <span class="bold fs-16">{{ $variant->getPropertyName() }}: </span>
+                                <span class="fs-16">{{ $variant->value }}</span>
+                            </div>
+                        @endforeach
                     </div>
                 </div>
             </div>

@@ -21,4 +21,14 @@ class PropertyVariant extends Model
     }
 
     protected $fillable = ['ad_id', 'property_id', 'value'];
+
+    public function propety()
+    {
+        return $this->belongsTo(Property::class, 'property_id', 'id');
+    }
+
+    public function getPropertyName()
+    {
+        return $this->propety()->first()->name;
+    }
 }

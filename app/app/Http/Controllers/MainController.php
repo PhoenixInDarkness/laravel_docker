@@ -10,7 +10,7 @@ class MainController extends Controller
 {
     public function index()
     {
-        $ads = Ad::all();
+        $ads = Ad::paginate(4);
 
         return view('main.index', compact('ads'));
     }

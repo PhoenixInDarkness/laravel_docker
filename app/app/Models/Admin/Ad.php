@@ -59,4 +59,14 @@ class Ad extends Model
     {
         return $this->hasMany(PropertyVariant::class);
     }
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
+
+    public function getCategoryName()
+    {
+        return $this->category()->first()->name;
+    }
 }

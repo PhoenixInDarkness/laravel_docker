@@ -50,6 +50,9 @@
                         </div>
                     </div>
                 @endforeach
+                <div class="d-flex flex-row-reverse px-4 dark">
+                    {{ $ads->links() }}
+                </div>
             </div>
 
         </div>

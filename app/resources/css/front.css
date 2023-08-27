@@ -512,6 +512,83 @@ input::-ms-input-placeholder { /* Microsoft Edge */
     font-size: 24px !important;
 }
 
+.border-radius-1 {
+    border-radius: 0.375rem;
+}
+
+.avatar {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.user-name {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.fs-16 {
+    font-size: 16px;
+}
+
+.round-40 {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.round-40-eye {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.white-image {
+    filter: brightness(0) invert(1);
+}
+
+.fs-24 {
+    font-size: 24px !important;
+}
+
+.border-radius-top {
+    border-top-right-radius: 0.375rem;
+    border-top-left-radius: 0.375rem;
+}
+
+.border-radius-bottom {
+    border-bottom-right-radius: 0.375rem;
+    border-bottom-left-radius: 0.375rem;
+}
+
+.fs-30 {
+    font-size: 30px !important;
+}
+
+.bold {
+    font-weight: bold !important;
+}
+
+.pagination > li > a,
+.pagination > .disabled > span {
+    background-color: #32353e;
+    color: #b7b8bb;
+}
+
+.pagination > .active > a,
+.pagination > .active > a:focus,
+.pagination > .active > a:hover,
+.pagination > .active > span,
+.pagination > .active > span:focus,
+.pagination > .active > span:hover {
+    background-color: #ffc107;
+    border-color: #dee2e6;
+    color: #000;
+}
+
 .ads-count-badge {
     margin-left: 2rem;
     display: flex;
