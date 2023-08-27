@@ -42,4 +42,13 @@ class MainController extends Controller
 
         return view('main.search')->with(['ads' => $ads, 'search' => $search]);
     }
+
+    public function viewByCategory($slug)
+    {
+        $category = Category::where('slug', $slug)->first();
+        $ads = Ad::where('category_id', $category->id)
+            ->paginate(20);
+
+        return view('main.category')->with(['ads' => $ads, 'category' => $category->name]);
+    }
 }
