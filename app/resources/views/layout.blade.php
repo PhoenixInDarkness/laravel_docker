@@ -15,7 +15,7 @@
 
   @include('partials.header')
 
-  <div class="content start" style="z-index: 100;">
+  <div class="content start bg-light-body" style="z-index: 100;">
     @yield('content')
   </div>
   </div>

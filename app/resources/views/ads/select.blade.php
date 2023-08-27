@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="flex h-screen m-auto pt-10 mt-5 text-center align-middle h-20 bg-darkness">
-        <div class="m-auto text-bg-darkness bg-darkness">
+    <div class="flex h-screen m-auto pt-10 mt-5 text-center align-middle h-20">
+        <div class="m-auto text-bg-darkness">
             <h2 class="pb-3">Select list ad category</h2>
             <form method="GET" action="{{ route('add_ad') }}">
                 @csrf

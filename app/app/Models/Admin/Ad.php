@@ -20,7 +20,7 @@ class Ad extends Model
         ];
     }
 
-    protected $fillable = ['title', 'description', 'category_id', 'block', 'price', 'city'];
+    protected $fillable = ['title', 'description', 'category_id', 'block', 'price', 'city', 'owner_id'];
 
     public function getPreviewPhoto ()
     {

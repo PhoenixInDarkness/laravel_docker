@@ -54,6 +54,12 @@
 
                         <button type="submit" class="btn btn-primary">{{ __('Register') }}</button>
                     </div>
+                    <div class="d-flex justify-content-end">
+                        <a href="{{ url('/auth/google/redirect') }}">
+                            <img
+                                src="https://developers.google.com/identity/images/btn_google_signin_dark_normal_web.png">
+                        </a>
+                    </div>
                 </form>
             </div>
         </div>

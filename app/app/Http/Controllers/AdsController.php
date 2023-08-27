@@ -8,6 +8,7 @@ use App\Models\Admin\PropertyVariant;
 use App\Models\Photo;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Redirect;
 
 class AdsController extends Controller
 {
@@ -70,6 +71,6 @@ class AdsController extends Controller
             }
         }
 
-        dd($ad, $properties, $photos);
+        return Redirect::route('ads_view', ['id' => $ad->id]);
     }
 }

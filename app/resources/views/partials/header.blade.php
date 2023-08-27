@@ -9,7 +9,9 @@
     <div class="container">
         <div class="header-height d-flex flex-row align-items-center">
             <div class="d-flex justify-content-start align-items-center">
-                <img class="logo" src="{{asset('/images/logo.svg')}}" alt="" style="width: 150px; height: auto;">
+                <a href="{{ route('home') }}">
+                    <img class="logo" src="{{asset('/images/logo.svg')}}" alt="" style="width: 150px; height: auto;">
+                </a>
             </div>
             <nav class="navbar-lg ms-4 w-100">
                 <a class="nav-link-lg mx-3 {{ setActive('home') }}" href="{{ route('home') }}">Home</a>
