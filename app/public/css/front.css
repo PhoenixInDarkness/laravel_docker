@@ -586,6 +586,34 @@ input::-ms-input-placeholder { /* Microsoft Edge */
     color: #000;
 }
 
+.ads-author-avatar {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    top: 110px;
+    z-index: 20
+}
+
+.ads-author-name {
+    color: #000;
+    font-weight: bold;
+    text-align: center;
+    font-size: 40pt;
+    margin-top: 10rem;
+}
+
+.ads-author-title-section {
+    text-align: center;
+    font-weight: bold;
+    font-size: 30pt;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
 .ads-count-badge {
     margin-left: 2rem;
     display: flex;

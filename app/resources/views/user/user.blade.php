@@ -3,18 +3,15 @@
 @section('content')
     <div class="p-6">
         <section class="text-center">
-            <img
-                style="width: 220px; height: 220px; border-radius: 50%; overflow: hidden; position: relative; top: 110px; z-index: 20"
-                src="{{$user->avatar}}"/>
+            <img class="ads-author-avatar" src="{{$user->avatar}}"/>
         </section>
         <div class="card w-75 mx-auto">
             <div class="card-body">
-                <section class="text-black font-bold text-center" style="font-size: 40pt; margin-top: 10rem">
+                <section class="ads-author-name">
                     {{$user->name}}
                 </section>
                 <section class="mt-5">
-                    <div class="text-center font-bold d-flex flex-row align-items-center justify-content-center"
-                         style="font-size: 30pt">
+                    <div class="ads-author-title-section">
                         <div>User Ads</div>
                         <div class="ads-count-badge">{{$user->ads->count()}}</div>
                     </div>
