@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="flex w-100 pt-10 m-5 text-center align-middle">
-        <div class="m-auto w-75 text-bg-darkness bg-darkness p-5">
+        <div class="m-auto col-12 col-md-8 text-bg-darkness bg-darkness p-5">
             <h2 class="pb-3">Creating an ad in a category {{ $category->name }}</h2>
             <form method="POST" action="{{ route('store_ad') }}"  enctype="multipart/form-data" id="upload-form">
                 @csrf
