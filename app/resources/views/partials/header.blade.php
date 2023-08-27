@@ -1,7 +1,11 @@
 <div id="preLoader" class="loader-overlay">
     <div class="animsition-loading"></div>
 </div>
-<header class="header header-height sticky-top">
+<header class="header header-height sticky-top
+    @if(!isActive('home'))
+        bg-darkness
+    @endif
+">
     <div class="container">
         <div class="header-height d-flex flex-row align-items-center">
             <div class="d-flex justify-content-start align-items-center">

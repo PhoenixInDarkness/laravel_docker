@@ -10,7 +10,7 @@
     @yield('style')
 </head>
 
-<body class="w-100 col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 min-vh-100 bg-darkness">
+<body class="w-100 col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
 
 
   @include('partials.header')
