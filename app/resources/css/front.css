@@ -478,6 +478,8 @@ input::-ms-input-placeholder { /* Microsoft Edge */
     height: 50px;
     width: 50px;
     border-radius: 50%;
+    -o-object-fit: cover;
+    object-fit: cover;
 }
 
 .user-name {
@@ -514,12 +516,6 @@ input::-ms-input-placeholder { /* Microsoft Edge */
 
 .border-radius-1 {
     border-radius: 0.375rem;
-}
-
-.avatar {
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
 }
 
 .user-name {
@@ -596,7 +592,9 @@ input::-ms-input-placeholder { /* Microsoft Edge */
     overflow: hidden;
     position: relative;
     top: 110px;
-    z-index: 20
+    z-index: 20;
+    -o-object-fit: cover;
+    object-fit: cover;
 }
 
 .ads-author-name {

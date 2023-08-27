@@ -14,9 +14,8 @@
             <nav class="navbar-lg ms-4 w-100">
                 <a class="nav-link-lg mx-3 {{ setActive('home') }}" href="{{ route('home') }}">Home</a>
                 <a class="nav-link-lg mx-3" href="#">Categories</a>
-                <a class="nav-link-lg mx-3" href="#">About Us</a>
-                <a class="nav-link-lg mx-3" href="#">Contact Us</a>
                 @if(Auth::check())
+                <a class="nav-link-lg mx-3" href="{{ route('user.show', ['user' => Auth::user()->id]) }}">Profile</a>
                     <div class="ms-auto d-flex" style="margin-right: 11rem !important;">
                         <a class="nav-link-lg mx-3" href="{{ route('new.listing') }}">Create New Listing</a>
                         <a class="nav-link-lg mx-3" href="{{ route('logout') }}">Logout</a>

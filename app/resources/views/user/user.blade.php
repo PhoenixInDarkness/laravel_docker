@@ -3,7 +3,7 @@
 @section('content')
     <div class="p-6">
         <section class="text-center">
-            <img class="ads-author-avatar" src="{{ asset('/images/avatar.png') }}"/>
+            <img class="ads-author-avatar" src="{{ asset($user->getAvatar()) }}"/>
         </section>
         <div class="card w-75 mx-auto bg-darkness text-bg-darkness border-gray">
             <div class="card-body">

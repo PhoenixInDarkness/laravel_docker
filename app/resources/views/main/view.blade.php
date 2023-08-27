@@ -30,7 +30,7 @@
                     <div class="card border-gray bg-darkness">
                         <div class="col-md-12 d-flex px-4 py-4">
                             <div class="col-md-2 m-auto">
-                                <img class="avatar m-auto" src="{{ asset('/images/avatar.png') }}">
+                                <img class="avatar m-auto" src="{{ asset($user->getAvatar()) }}">
                             </div>
                             <div class="col-md-10 px-3">
                                 <div class="col-md-12">

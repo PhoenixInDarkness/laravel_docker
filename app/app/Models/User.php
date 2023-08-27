@@ -49,4 +49,13 @@ class User extends \TCG\Voyager\Models\User
     {
         return $this->hasMany(\App\Models\Admin\Ad::class, 'owner_id', 'id');
     }
+
+    public function getAvatar()
+    {
+        if ($this->avatar == 'users/default.png') {
+            return $this->avatar;
+        } else {
+            return 'storage/' . $this->avatar;
+        }
+    }
 }
