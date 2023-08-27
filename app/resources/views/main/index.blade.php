@@ -27,19 +27,16 @@
         <div class="container">
             <div class="m-auto col-md-12 d-flex row card-section">
                 <div class="col-md-12 black-categories-panel px-4 mb-5">
-                    <li class="black-categories">Vehicles</li>
-                    <li class="black-categories">Gadgets</li>
-                    <li class="black-categories">Jobs</li>
-                    <li class="black-categories">Job applicant</li>
-                    <li class="black-categories">Real estate</li>
-                    <li class="black-categories">Service</li>
-                    <li class="black-categories">Accommodation</li>
-                    <li class="black-categories">Parts</li>
+                    @foreach($categories as $category)
+                        <a href="#" class="text-decoration-none">
+                            <li class="black-categories">{{ $category->name }}</li>
+                        </a>
+                    @endforeach
                 </div>
                 @foreach($ads as $ad)
                     <div class="col-md-3 px-4 pb-5">
                         <div class="card px-0 border-gray bg-darkness">
-                            <a href="{{ route('ads_view', ['id' => $ad->id]) }}" class="text-decoration-none">
+                            <a href="{{ route('ads_view', ['slug' => $ad->slug]) }}" class="text-decoration-none">
                                 <img class="card-img-top" src="{{ asset($ad->getPreviewPhoto()) }}">
                                 <div class="card-body">
                                     <p class="card-title">&euro; {{$ad->price}}</p>
