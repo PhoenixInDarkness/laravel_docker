@@ -19,7 +19,7 @@
             @include('partials.header')
 
             <!-- Page Content -->
-            <main class="d-flex flex-row min-vh-100 bg-light-body p-5">
+            <main class="d-flex flex-row min-vh-100 bg-light-body py-5">
                 @yield('content')
             </main>
         </div>
