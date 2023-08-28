@@ -1,11 +1,20 @@
 @extends('layout')
 
 @section('content')
-    <div class="search-container">
+    <div class="search-container @if($ads->total() === 0) vh-100 @endif">
         <div class="col-md-12 m-auto text-center pt-3 pb-5">
-            <h2 class="mt-3 pt-3 main-separator">{{$ads->total()}} items in category "{{$category}}"</h2>
+            <h2 class="mt-3 pt-3 main-separator">
+                @if($ads->total() === 0)
+                    <span>No ads found</span>
+                @elseif($ads->total() === 1)
+                    <span>{{$ads->total()}} item</span>
+                @elseif($ads->total() > 1)
+                    <span>{{$ads->total()}} items</span>
+                @endif
+                in category "{{$category}}"
+            </h2>
         </div>
-        <div class="bg-darkness col-12 col-md-10 mx-auto pt-5" style="max-width: 100%;">
+        <div class="bg-darkness col-12 col-md-10 mx-auto pt-5 @if($ads->total() === 0) d-none @endif" style="max-width: 100%;">
             <div class="container pt-5">
                 <div class="m-auto col-12 d-flex row card-section">
                     @foreach($ads as $ad)

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ChatController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\ProfileController;
@@ -24,10 +25,6 @@ Route::get('/categories/{slug}', [MainController::class, 'viewByCategory'])->nam
 
 Route::get('/user/{user}', [\App\Http\Controllers\UserController::class, 'show'])->name('user.show');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
-
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::post('/profile/avatar', [ProfileController::class, 'avatar'])->name('profile.avatar');
@@ -37,6 +34,12 @@ Route::middleware('auth')->group(function () {
     Route::get('/new-listing', [AdsController::class, 'selectCategory'])->name('new.listing');
     Route::get('/ad-create', [AdsController::class, 'create'])->name('add_ad');
     Route::post('/ad-store', [AdsController::class, 'store'])->name('store_ad');
+
+    Route::get('/chat/{slug}', [ChatController::class, 'show'])->name('chat');
+    Route::post('/chat/send', [ChatController::class, 'send'])->name('chat.send');
+
+    Route::get('/chat/list/{slug}', [ChatController::class, 'list'])->name('chat.list');
+    Route::get('/chat/{slug}/{user}', [ChatController::class, 'showForOwner'])->name('chat.show-for-owner');
 });
 
 Route::group(['prefix' => 'admin'], function () {

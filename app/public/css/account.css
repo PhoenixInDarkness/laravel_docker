@@ -729,6 +729,9 @@ select {
 .z-50 {
   z-index: 50;
 }
+.float-right {
+  float: right;
+}
 .m-5 {
   margin: 1.25rem;
 }
@@ -762,6 +765,10 @@ select {
 .my-auto {
   margin-top: auto;
   margin-bottom: auto;
+}
+.mx-5 {
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
 }
 .-ml-px {
   margin-left: -1px;
@@ -841,6 +848,12 @@ select {
 .mt-8 {
   margin-top: 2rem;
 }
+.ms-5 {
+  margin-inline-start: 1.25rem;
+}
+.ms-3 {
+  margin-inline-start: 0.75rem;
+}
 .block {
   display: block;
 }
@@ -874,6 +887,12 @@ select {
 .h-screen {
   height: 100vh;
 }
+.h-6 {
+  height: 1.5rem;
+}
+.h-2 {
+  height: 0.5rem;
+}
 .min-h-screen {
   min-height: 100vh;
 }
@@ -894,6 +913,19 @@ select {
 }
 .w-full {
   width: 100%;
+}
+.w-fit {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.w-6 {
+  width: 1.5rem;
+}
+.w-2 {
+  width: 0.5rem;
+}
+.w-9 {
+  width: 2.25rem;
 }
 .max-w-6xl {
   max-width: 72rem;
@@ -1082,6 +1114,9 @@ select {
 .p-6 {
   padding: 1.5rem;
 }
+.p-2 {
+  padding: 0.5rem;
+}
 .px-0 {
   padding-left: 0px;
   padding-right: 0px;
@@ -1182,6 +1217,15 @@ select {
 .text-center {
   text-align: center;
 }
+.text-right {
+  text-align: right;
+}
+.text-start {
+  text-align: start;
+}
+.text-end {
+  text-align: end;
+}
 .align-middle {
   vertical-align: middle;
 }
@@ -1216,6 +1260,9 @@ select {
 }
 .font-semibold {
   font-weight: 600;
+}
+.font-bold {
+  font-weight: 700;
 }
 .uppercase {
   text-transform: uppercase;
