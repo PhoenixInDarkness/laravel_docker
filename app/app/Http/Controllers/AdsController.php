@@ -71,6 +71,6 @@ class AdsController extends Controller
             }
         }
 
-        return Redirect::route('ads_view', ['id' => $ad->id]);
+        return Redirect::route('ads_view', ['slug' => $ad->slug]);
     }
 }

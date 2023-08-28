@@ -53,7 +53,7 @@
                         @foreach($user->ads as $ad)
                             <div class="col-md-6 col-lg-4 col-xl-3 px-4 pb-5">
                                 <div class="card px-0 border-gray bg-darkness">
-                                    <a href="{{ route('ads_view', ['id' => $ad->id]) }}" class="text-decoration-none">
+                                    <a href="{{ route('ads_view', ['slug' => $ad->slug]) }}" class="text-decoration-none">
                                         <img class="card-img-top" src="{{ asset($ad->getPreviewPhoto()) }}">
                                         <div class="card-body">
                                             <p class="card-title">&euro; {{$ad->price}}</p>
