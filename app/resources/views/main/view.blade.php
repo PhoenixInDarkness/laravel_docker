@@ -1,5 +1,7 @@
 @extends('layout')
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
 @section('content')
     <div class="bg-darkness w-100" style="max-width: 100%;">
         <div class="container">
