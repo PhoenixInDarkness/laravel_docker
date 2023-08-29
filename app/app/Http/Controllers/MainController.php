@@ -23,7 +23,7 @@ class MainController extends Controller
         $ad = Ad::where('slug', $slug)->first();
         $user = $ad->owner()->first();
         $propertyVariants = $ad->propertyVariants()->get();
-        $photos = $ad->getAllPhotos();
+        $photos = $ad->orderBy('id', 'desc')->getAllPhotos();
 
         return view('main.view', compact('ad', 'user', 'propertyVariants', 'photos'));
     }
