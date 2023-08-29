@@ -58,4 +58,9 @@ class User extends \TCG\Voyager\Models\User
             return 'storage/' . $this->avatar;
         }
     }
+
+    public function getHidePhone()
+    {
+        return substr($this->phone, -4);
+    }
 }
