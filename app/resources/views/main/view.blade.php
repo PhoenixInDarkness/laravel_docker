@@ -4,10 +4,10 @@
     <div class="bg-darkness w-100" style="max-width: 100%;">
         <div class="container">
             <div class="m-auto col-md-12 d-flex row card-section">
-                <div id="adsCarousel" class="carousel slide col-md-7 bg-d-black mt-5 border-radius-top" data-ride="carousel">
+                <div id="carouselExampleIndicators" class="carousel slide col-md-7 bg-d-black mt-5 border-radius-top" data-ride="carousel">
                     <ol class="carousel-indicators">
                         @foreach($photos as $photo)
-                            <li data-target="#adsCarousel" data-slide-to="{{ $loop->index }}"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="{{ $loop->index }}"></li>
                         @endforeach
                     </ol>
                     <div class="carousel-inner">
@@ -21,10 +21,10 @@
                             </div>
                         @endforeach
                     </div>
-                    <a class="carousel-control-prev" href="#adsCarousel" role="button" data-slide="prev">
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     </a>
-                    <a class="carousel-control-next" href="#adsCarousel" role="button" data-slide="next">
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     </a>
                 </div>
