@@ -40,27 +40,26 @@
     <div class="position-absolute vh-100 w-100 d-none" id="navbarBack"></div>
     <div class="position-fixed sticky w-100 rounded-1 vh-100" id="navbarNav" style="max-width: 0; z-index: 30" data-view="close">
         <ul class="navbar-nav pl-2">
-            <li class="nav-item mx-2">
-                <a class="nav-link text-white {{ setActive('home') }}" href="{{ route('home') }}">Home</a>
+            <li class="nav-item mx-2 py-1">
+                <a class="nav-link text-white" {{setActive('home')}} href="{{ route('home') }}">Home</a>
             </li>
-            <li class="nav-item mx-2">
+            <li class="nav-item mx-2 py-1">
                 <a class="nav-link text-white {{setActive('profile.edit')}}" href="{{route('profile.edit')}}">Profile</a>
             </li>
         </ul>
-        <hr class="text-white">
-        <ul class="navbar-nav mx-2">
+        <ul class="navbar-nav">
             @if(\Illuminate\Support\Facades\Auth::check())
-                <li class="nav-item mx-2">
+                <li class="nav-item mx-2 py-1">
                     <a class="nav-link text-white" href="{{ route('new.listing') }}">Create New Listing</a>
                 </li>
-                <li class="nav-item mx-2">
+                <li class="nav-item mx-2 py-1">
                     <a class="nav-link text-white" href="{{ route('logout') }}">Logout</a>
                 </li>
             @else
-                <li class="nav-item mx-2">
+                <li class="nav-item mx-2 py-1">
                     <a class="nav-link text-white" href="{{ route('login') }}">Login</a>
                 </li>
-                <li class="nav-item mx-2">
+                <li class="nav-item mx-2 py-1">
                     <a class="nav-link text-white" href="{{ route('register') }}">Register</a>
                 </li>
             @endif
@@ -74,13 +73,14 @@
         if (hiddenNavbar.dataset.view === 'close') {
             hiddenNavbar.dataset.view = 'show';
             hiddenNavbar.style.setProperty('max-width', '70%');// = 'max-height: max-content'
-            hiddenNavbar.style.setProperty('padding-left', '3rem');// = 'max-height: max-content'
+            hiddenNavbar.style.setProperty('padding', '2rem 1rem');// = 'max-height: max-content'
+            hiddenNavbar.style.setProperty('font-size', '24px');// = 'max-height: max-content'
 
             document.getElementById('navbarBack').classList.remove('d-none');
         } else {
             hiddenNavbar.dataset.view = 'close';
             hiddenNavbar.style.setProperty('max-width', '0');
-            hiddenNavbar.style.setProperty('padding-left', '0');
+            hiddenNavbar.style.setProperty('padding', '0');
 
             document.getElementById('navbarBack').classList.add('d-none');
         }
