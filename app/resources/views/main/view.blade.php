@@ -1,21 +1,19 @@
 @extends('layout')
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-
 @section('content')
     <div class="bg-darkness w-100" style="max-width: 100%;">
         <div class="container">
             <div class="m-auto col-md-12 d-flex row card-section">
-                <div id="carouselExampleIndicators" class="carousel slide col-md-7 bg-d-black mt-5 border-radius-top" data-ride="carousel">
+                <div id="adsCarousel" class="carousel slide col-md-7 bg-d-black mt-5 border-radius-top" data-ride="carousel">
                     <ol class="carousel-indicators">
                         @foreach($photos as $photo)
-                            <li data-target="#carouselExampleIndicators" data-slide-to="{{ $loop->index }}"></li>
+                            <li data-target="#adsCarousel" data-slide-to="{{ $loop->index }}"></li>
                         @endforeach
                     </ol>
                     <div class="carousel-inner">
                         @foreach($photos as $photo)
                             <div class="carousel-item
-                            @if($loop->index == 1)
+                            @if($loop->index == 0)
                                 active
                             @endif
                             ">
@@ -23,13 +21,45 @@
                             </div>
                         @endforeach
                     </div>
-                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <a class="carousel-control-prev" href="#adsCarousel" role="button" data-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     </a>
-                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <a class="carousel-control-next" href="#adsCarousel" role="button" data-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     </a>
                 </div>
+
+
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        @foreach($photos as $photo)
+                            @if($loop->index == 0)
+                                <div class="carousel-item active">
+                                    <img class="d-block w-100" src="{{ asset($photo) }}" alt="First slide">
+                                </div>
+                            @else
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="{{ asset($photo) }}" alt="Second slide">
+                                </div>
+                            @endif
+                        @endforeach
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+
+
                 <div class="col-md-5 px-4 px-md-2 pb-5 mt-5">
                     <div class="card border-gray bg-darkness">
                         <div class="col-md-12 d-flex px-4 py-4">
