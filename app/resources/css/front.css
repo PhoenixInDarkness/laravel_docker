@@ -702,3 +702,7 @@ input::-ms-input-placeholder { /* Microsoft Edge */
         padding: 2rem 8rem;
     }
 }
+
+a:hover {
+    text-decoration: none !important;
+}
