@@ -48,7 +48,7 @@ class AdsController extends Controller
         $keys = array_keys($all);
 
         foreach ($keys as $key) {
-            if (is_int($key)) {
+            if (is_int($key) && $all[$key] !== null) {
                 $property_variant['property_id'] = $key;
                 $property_variant['value'] = $all[$key];
                 $property_variant['ad_id'] = $ad->id;
