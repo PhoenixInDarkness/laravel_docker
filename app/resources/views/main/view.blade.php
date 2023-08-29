@@ -12,18 +12,20 @@
                     </ol>
                     <div class="carousel-inner">
                         @foreach($photos as $photo)
-                            <div class="carousel-item active">
+                            <div class="carousel-item
+                            @if($loop->index == 1)
+                                active
+                            @endif
+                            ">
                                 <img class="d-block w-100" src="{{ asset($photo) }}" alt="First slide">
                             </div>
                         @endforeach
                     </div>
                     <a class="carousel-control-prev" href="#adsCarousel" role="button" data-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
                     </a>
                     <a class="carousel-control-next" href="#adsCarousel" role="button" data-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
                     </a>
                 </div>
                 <div class="col-md-5 px-4 px-md-2 pb-5 mt-5">
