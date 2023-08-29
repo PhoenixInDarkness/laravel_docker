@@ -35,7 +35,7 @@ class Ad extends Model
 
     public function getAllPhotos()
     {
-        $photos = $this->photo()->get();
+        $photos = $this->photo()->orderBy('id', 'desc')->get();
         $urls = [];
 
         foreach ($photos as $photo) {
