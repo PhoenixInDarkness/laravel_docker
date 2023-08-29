@@ -30,6 +30,15 @@ class AdsController extends Controller
 
     public function store(Request $request)
     {
+        $request->validate([
+            'title' => ['required', 'string'],
+            'description' => ['required', 'string'],
+            'category_id' => ['required', 'integer', 'exists:App\Models\Admin\Category,id'],
+            'price' => ['required', 'integer'],
+            'city' => ['required', 'string'],
+            'photos.*' => 'image|mimes:jpeg,png,jpg,gif,bmp,svg,webp|max:4096',
+        ]);
+
         $all = $request->all();
         $adData = [
             'title' => $all['title'],

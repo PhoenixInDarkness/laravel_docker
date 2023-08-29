@@ -7,6 +7,18 @@
                 <form method="POST" class="my-auto" action="{{ route('login') }}">
                     @csrf
 
+                    <div class="d-flex justify-content-end pb-5">
+                        <a href="{{ url('/auth/google/redirect') }}" class="btn mx-auto">
+                            <img src="https://developers.google.com/identity/images/btn_google_signin_dark_normal_web.png">
+                        </a>
+                    </div>
+
+                    <div class="d-flex align-items-center mb-3">
+                        <hr class="flex-grow-1">
+                        <span class="mx-3 text-white-50">OR</span>
+                        <hr class="flex-grow-1">
+                    </div>
+
                     <!-- Email Address -->
                     <div class="mb-3">
                         <label for="email" class="form-label">{{ __('Email') }}</label>
@@ -36,20 +48,13 @@
                     </div>
 
                     <div class="d-flex justify-content-end mb-3">
-                        @if (Route::has('password.request'))
+                        @if (Route::has('password.request') && false)
                             <a class="text-decoration-none me-3 text-white-50" href="{{ route('password.request') }}">
                                 {{ __('Forgot your password?') }}
                             </a>
                         @endif
 
                         <button type="submit" class="btn btn-primary">{{ __('Log in') }}</button>
-                    </div>
-
-                    <div class="d-flex justify-content-end">
-                        <a href="{{ url('/auth/google/redirect') }}">
-                            <img
-                                src="https://developers.google.com/identity/images/btn_google_signin_dark_normal_web.png">
-                        </a>
                     </div>
                 </form>
             </div>

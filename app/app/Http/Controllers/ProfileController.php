@@ -63,7 +63,7 @@ class ProfileController extends Controller
     public function avatar(Request $request): RedirectResponse
     {
         $request->validate([
-            'avatar' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048', // Подставьте подходящие условия
+            'avatar' => 'required|image|mimes:jpeg,png,jpg,gif,bmp,svg,webp|max:8192', // Подставьте подходящие условия
         ]);
 
         // Получение текущего авторизованного пользователя

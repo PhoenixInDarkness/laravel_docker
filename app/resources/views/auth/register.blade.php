@@ -7,6 +7,18 @@
                 <form method="POST" action="{{ route('register') }}">
                     @csrf
 
+                    <div class="d-flex justify-content-end pb-5">
+                        <a href="{{ url('/auth/google/redirect') }}" class="btn mx-auto">
+                            <img src="https://developers.google.com/identity/images/btn_google_signin_dark_normal_web.png">
+                        </a>
+                    </div>
+
+                    <div class="d-flex align-items-center mb-3">
+                        <hr class="flex-grow-1">
+                        <span class="mx-3 text-white-50">OR</span>
+                        <hr class="flex-grow-1">
+                    </div>
+
                     <!-- Name -->
                     <div class="mb-3">
                         <label for="name" class="form-label">{{ __('Name') }}</label>
@@ -53,12 +65,6 @@
                         </a>
 
                         <button type="submit" class="btn btn-primary">{{ __('Register') }}</button>
-                    </div>
-                    <div class="d-flex justify-content-end">
-                        <a href="{{ url('/auth/google/redirect') }}">
-                            <img
-                                src="https://developers.google.com/identity/images/btn_google_signin_dark_normal_web.png">
-                        </a>
                     </div>
                 </form>
             </div>

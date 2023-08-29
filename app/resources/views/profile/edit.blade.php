@@ -28,10 +28,10 @@
                         </div>
                     </div>
 
-                    <div class="mb-4 p-4 bg-darkness text-bg-darkness shadow rounded">
-                        <div class="container mx-auto">
-                            @include('profile.partials.delete-user-form')
-                        </div>
+{{--                    <div class="mb-4 p-4 bg-darkness text-bg-darkness shadow rounded">--}}
+{{--                        <div class="container mx-auto">--}}
+{{--                            @include('profile.partials.delete-user-form')--}}
+{{--                        </div>--}}
                     </div>
                 </div>
             </div>
