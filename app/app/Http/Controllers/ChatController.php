@@ -26,6 +26,7 @@ class ChatController extends Controller
             'buyer_id' => Auth::id(),
         ])->first() ??
             Chat::create([
+                'ad_id' => $ad->id,
                 'owner_id' => $ad->owner_id,
                 'buyer_id' => Auth::id(),
                 'channel' => $slug . '_' . Auth::id()
