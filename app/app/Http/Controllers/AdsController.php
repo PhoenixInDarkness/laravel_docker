@@ -23,7 +23,7 @@ class AdsController extends Controller
     {
         $categoryId = $request->query('category_id');
         $category = Category::find($categoryId);
-        $properties = $category->properties->select(['properties.id', 'properties.name'])->get();
+        $properties = $category->properties()->select(['properties.id', 'properties.name'])->get();
 
         return view('ads.create', compact('category', 'properties'));
     }
