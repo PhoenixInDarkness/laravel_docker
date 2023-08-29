@@ -10,7 +10,7 @@
     @yield('style')
 </head>
 
-<body class="w-100 col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+<body class="w-100 col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 px-0">
 @include('partials.header')
 
 <div class="content start bg-light-body" style="z-index: 100;">
