@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="pikoba@127.0.0.1" uuid="b7bc1cad-9225-4d53-846c-a0f4d38bf951">
+    <data-source source="LOCAL" name="pikoba@213.159.208.102" uuid="b7bc1cad-9225-4d53-846c-a0f4d38bf951">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://127.0.0.1:3307/pikoba</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="pikoba@127.0.0.1" uuid="d1a6c011-a34a-4a5a-9451-f3e63c2776bb">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
