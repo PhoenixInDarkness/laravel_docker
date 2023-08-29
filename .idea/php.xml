@@ -143,6 +143,9 @@
       <path value="$PROJECT_DIR$/app/vendor/league/oauth1-client" />
       <path value="$PROJECT_DIR$/app/vendor/cocur/slugify" />
       <path value="$PROJECT_DIR$/app/vendor/cviebrock/eloquent-sluggable" />
+      <path value="$PROJECT_DIR$/app/vendor/paragonie/sodium_compat" />
+      <path value="$PROJECT_DIR$/app/vendor/paragonie/random_compat" />
+      <path value="$PROJECT_DIR$/app/vendor/pusher/pusher-php-server" />
     </include_path>
   </component>
   <component name="PhpInterpreters">

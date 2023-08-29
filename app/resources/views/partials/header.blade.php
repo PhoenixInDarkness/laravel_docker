@@ -44,13 +44,7 @@
                 <a class="nav-link text-white {{ setActive('home') }}" href="{{ route('home') }}">Home</a>
             </li>
             <li class="nav-item mx-2">
-                <a class="nav-link text-white" href="#">Categories</a>
-            </li>
-            <li class="nav-item mx-2">
-                <a class="nav-link text-white" href="#">About Us</a>
-            </li>
-            <li class="nav-item mx-2">
-                <a class="nav-link text-white" href="#">Contact Us</a>
+                <a class="nav-link text-white {{setActive('profile.edit')}}" href="{{route('profile.edit')}}">Profile</a>
             </li>
         </ul>
         <hr class="text-white">
