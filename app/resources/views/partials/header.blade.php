@@ -16,7 +16,9 @@
             <nav class="navbar-lg ms-4 w-100">
                 <a class="nav-link-lg mx-3 {{ setActive('home') }}" href="{{ route('home') }}">Home</a>
                 @if(Auth::check())
-                <a class="nav-link-lg mx-3" href="{{ route('user.show', ['user' => Auth::user()->id]) }}">Profile</a>
+                    <a class="nav-link-lg mx-3"
+                       href="{{ route('user.show', ['user' => Auth::user()->id]) }}">Profile</a>
+                    <a class="nav-link-lg mx-3 {{setActive('chat.index')}}" href="{{route('chat.index')}}">Messages</a>
                     <div class="ms-auto d-flex" style="margin-right: 11rem !important;">
                         <a class="nav-link-lg mx-3" href="{{ route('new.listing') }}">Create New Listing</a>
                         <a class="nav-link-lg mx-3" href="{{ route('logout') }}">Logout</a>
@@ -38,7 +40,8 @@
         </div>
     </div>
     <div class="position-absolute vh-100 w-100 d-none" id="navbarBack"></div>
-    <div class="position-fixed sticky w-100 rounded-1 vh-100" id="navbarNav" style="max-width: 0; z-index: 30" data-view="close">
+    <div class="position-fixed sticky w-100 rounded-1 vh-100" id="navbarNav" style="max-width: 0; z-index: 30"
+         data-view="close">
         <ul class="navbar-nav pl-2">
             <li class="nav-item mx-2 py-1">
                 <a class="nav-link text-white" {{setActive('home')}} href="{{ route('home') }}">Home</a>

@@ -6273,6 +6273,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 window.Alpine = alpinejs__WEBPACK_IMPORTED_MODULE_2__["default"];
+window.$ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 alpinejs__WEBPACK_IMPORTED_MODULE_2__["default"].start();
 
 /***/ }),

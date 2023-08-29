@@ -12,6 +12,14 @@ use Illuminate\Support\Facades\Auth;
 
 class ChatController extends Controller
 {
+    public function index()
+    {
+        $chatsAsBuyer = Chat::where('buyer_id', Auth::id())->get();
+        $chatsAsOwner = Chat::where('owner_id', Auth::id())->get();
+
+        return view('chat.index')->with(['buyerChats' => $chatsAsBuyer, 'ownerChats' => $chatsAsOwner]);
+    }
+
     public function show(string $slug)
     {
         $ad = Ad::where('slug', $slug)->first();
@@ -89,5 +97,18 @@ class ChatController extends Controller
             'chat' => $chat,
             'messages' => $messages
         ]);
+    }
+
+    public function data(Chat $chat)
+    {
+        $messages = $chat->messages;
+        $messages->each(function ($message) {
+            $message->sender = $message->sender === Auth::id() ? 'self' : 'external';
+            unset($message['id']);
+            unset($message['chat_id']);
+            unset($message['created_at']);
+        });
+
+        return response()->json($messages);
     }
 }

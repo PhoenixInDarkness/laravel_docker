@@ -35,9 +35,11 @@ Route::middleware('auth')->group(function () {
     Route::get('/ad-create', [AdsController::class, 'create'])->name('add_ad');
     Route::post('/ad-store', [AdsController::class, 'store'])->name('store_ad');
 
-    Route::get('/chat/{slug}', [ChatController::class, 'show'])->name('chat');
+    Route::get('/chat/ad/{slug}', [ChatController::class, 'show'])->name('chat');
     Route::post('/chat/send', [ChatController::class, 'send'])->name('chat.send');
 
+    Route::get('/chat/index', [ChatController::class, 'index'])->name('chat.index');
+    Route::get('/chat/data/{chat}', [ChatController::class, 'data'])->name('chat.data');
     Route::get('/chat/list/{slug}', [ChatController::class, 'list'])->name('chat.list');
     Route::get('/chat/{slug}/{user}', [ChatController::class, 'showForOwner'])->name('chat.show-for-owner');
 });

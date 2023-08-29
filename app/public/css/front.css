@@ -73,7 +73,6 @@ body {
 
 .active-menu {
     font-weight: bold !important;
-    font-size: 12pt !important;
 }
 
 .nav-link-lg {
@@ -698,5 +697,9 @@ input::-ms-input-placeholder { /* Microsoft Edge */
     @media (min-width: 768px) {
         padding: 2rem 8rem;
     }
+}
+
+a:hover {
+    text-decoration: none !important;
 }
 
