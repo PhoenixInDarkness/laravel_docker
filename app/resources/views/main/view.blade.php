@@ -99,7 +99,7 @@
                     <div class="col-md-12 pb-4">
                         <h3 class="bold fs-24">Characteristics</h3>
                         @foreach($propertyVariants as $variant)
-                            <div class="col-md-12">
+                            <div class="col-md-12 px-0">
                                 <span class="bold fs-16">{{ $variant->getPropertyName() }}: </span>
                                 <span class="fs-16">{{ $variant->value }}</span>
                             </div>
