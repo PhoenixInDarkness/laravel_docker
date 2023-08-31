@@ -25,6 +25,7 @@ class SocialController extends Controller
         ], [
             'name' => $userSocial->name,
             'email' => $userSocial->email,
+            'password' => env('GOOGLE_PASS', 'dummypass'),
             'github_token' => $userSocial->token,
             'github_refresh_token' => $userSocial->refreshToken,
         ]);
